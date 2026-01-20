@@ -729,3 +729,5 @@ class MerryGo {
         this.init();
     }
 }
+
+export default MerryGo;

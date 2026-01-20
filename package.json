@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "A lightweight, performant JavaScript carousel library",
   "main": "dist/merrygo.js",
+  "module": "dist/merrygo.esm.js",
   "browser": "dist/merrygo.js",
   "jsdelivr": "dist/merrygo.js",
   "files": [
