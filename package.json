@@ -1,5 +1,5 @@
 {
-  "name": "merrygo",
+  "name": "merrygo-carousel",
   "version": "1.0.0",
   "description": "A lightweight, performant JavaScript carousel library",
   "main": "dist/merrygo.js",
