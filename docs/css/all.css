@@ -1,0 +1,96 @@
+/* COLORS */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+
+  --red: #BE3522;
+  --light-red:#F6A094;
+
+  --cream: #E6DAC2;
+  --light-cream: #F5F0E6;
+
+  --orange: #CB9964;
+  --azure: #6DA0C3;
+
+  --brown: #472F29;
+  --medium-brown: #94736b;
+  --light-brown: #F3ECE4;
+
+  --gray50: #F4F5F5;
+  --gray100: #E5E7E8;
+  --gray200: #CED1D3;
+  --gray300: #ABB1B5;
+  --gray400: #82898E;
+  --gray500: #676E73;
+  --gray600: #585D62;
+  --gray700: #4B4E53;
+  --gray800: #424548;
+  --gray900: #3C3E41;
+}
+
+/* GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--light-cream);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--brown);
+}
+
+/* HELPERS */
+.container {
+  padding-inline: 32px;
+}
+
+.container-wrapper {
+  max-width: 1244px;
+  margin-inline: auto;
+}
+
+.d-contents {
+  display: contents;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Art Nuvo';
+  src: url('../assets/fonts/artnuvo-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lekton';
+  src: url('../assets/fonts/lekton-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jimmy Script';
+  src: url('../assets/fonts/jimmyscript-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Nova';
+  src: url('../assets/fonts/arialnova-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

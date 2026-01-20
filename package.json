@@ -1,0 +1,33 @@
+{
+  "name": "merrygo",
+  "version": "1.0.0",
+  "description": "A lightweight, performant JavaScript carousel library",
+  "main": "dist/merrygo.js",
+  "scripts": {
+    "build": "node build.js",
+    "docs": "cd docs && python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheus-braga6/merrygo.git"
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swipe",
+    "touch",
+    "responsive",
+    "lightweight",
+    "javascript",
+    "vanilla-js",
+    "merrygo"
+  ],
+  "author": "Matheus Braga <matheus-braga6@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheus-braga6/merrygo/issues"
+  },
+  "homepage": "https://matheus-braga6.github.io/merrygo/",
+  "devDependencies": {},
+  "dependencies": {}
+}

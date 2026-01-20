@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MerryGo - JavaScript Carousel Library</title>
+  <meta name="description" content="MerryGo is a highly customizable JavaScript carousel that supports multiple slides, drag & swipe, autoplay, navigation arrows, pagination, and responsive breakpoints.">
+  <link rel="icon" type="image/svg+xml" href="/docs/assets/icons/circle.svg">
+  <link rel="stylesheet" href="/docs/css/all.css">
+  <link rel="stylesheet" href="/docs/css/landing.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero__background">
+      <img 
+        src="/docs/assets/images/carousel-one.png" 
+        alt="MerryGo Background" 
+        class="hero__background-image"
+      >
+    </div>
+    
+    <div 
+      class="hero__content"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+    >
+      <div class="hero__name">
+        <h1 class="hero__title">MerryGo</h1>
+        <p class="hero__subtitle">carousel</p>
+      </div>
+
+      <img 
+        src="/docs/assets/icons/circle.svg" 
+        alt="MerryGo Logo" 
+        class="hero__logo"
+      >
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="section features">
+    <div 
+      class="section__container"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="600"  
+    >
+      <div class="section__header">
+        <h2 class="section__title">Features</h2>
+        <p class="section__subtitle">
+          Everything you need for a modern, performant carousel
+        </p>
+      </div>
+
+      <div class="features__grid">
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12C3 10.067 4.567 8.5 6.5 8.5C7.7035 8.5 8.51959 8.9338 9.19914 9.61336C9.9255 10.3397 10.4851 11.3322 11.1258 12.4856L11.1595 12.5462C11.7605 13.6283 12.4431 14.8573 13.3866 15.8009C14.3946 16.8088 15.7035 17.5 17.5 17.5C20.5376 17.5 23 15.0376 23 12C23 8.96243 20.5376 6.5 17.5 6.5C15.8394 6.5 14.3508 7.2359 13.3423 8.39937C13.7887 9.05406 14.1574 9.70577 14.464 10.2574C15.0681 9.20718 16.2014 8.5 17.5 8.5C19.433 8.5 21 10.067 21 12C21 13.933 19.433 15.5 17.5 15.5C16.2965 15.5 15.4804 15.0662 14.8009 14.3866C14.0745 13.6603 13.5149 12.6678 12.8742 11.5144L12.8405 11.4538C12.2395 10.3717 11.5569 9.14265 10.6134 8.19914C9.60541 7.1912 8.2965 6.5 6.5 6.5C3.46243 6.5 1 8.96243 1 12C1 15.0376 3.46243 17.5 6.5 17.5C8.16056 17.5 9.64923 16.7641 10.6577 15.6006C10.2113 14.9459 9.84262 14.2942 9.53605 13.7426C8.93194 14.7928 7.79856 15.5 6.5 15.5C4.567 15.5 3 13.933 3 12Z"></path></svg>
+          </div>
+          <h3 class="feature__title">Infinite Loop</h3>
+          <p class="feature__description">Seamless continuous scrolling with automatic cloning</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5002 2C12.2241 2 12.0002 2.22386 12.0002 2.5V12H10.0002V4.5C10.0002 4.22386 9.77634 4 9.5002 4C9.22405 4 9.0002 4.22386 9.0002 4.5V14C8.64653 14 7.00024 14 7.00024 14C6.61911 12.3792 5.64236 11.4407 4.5954 11.3216C4.87926 12.0664 5.36117 13.2592 6.16634 15.0995C7.02511 17.0622 7.89128 18.5218 9.00374 19.4986C10.0783 20.442 11.4586 21 13.5002 21C16.5378 21 19.0002 18.5377 19.0002 15.5002V7C19.0002 6.72386 18.7763 6.5 18.5002 6.5C18.2241 6.5 18.0002 6.72386 18.0002 7V12H16.0002V4C16.0002 3.72386 15.7763 3.5 15.5002 3.5C15.2241 3.5 15.0002 3.72386 15.0002 4V12H13.0002V2.5C13.0002 2.22386 12.7763 2 12.5002 2ZM21.0002 15.5002C21.0002 19.6424 17.6423 23 13.5002 23C11.0417 23 9.17214 22.308 7.68416 21.0015C6.23411 19.7283 5.22528 17.9381 4.33405 15.9012C3.40393 13.7753 2.89004 12.4804 2.60991 11.7235C2.25318 10.7597 2.74616 9.41212 4.08583 9.31846C5.24076 9.23771 6.22061 9.61249 7.0002 10.2587V4.5C7.0002 3.11929 8.11949 2 9.5002 2C9.68522 2 9.86554 2.0201 10.0391 2.05823C10.2477 0.888227 11.2702 0 12.5002 0C13.5602 0 14.4661 0.659694 14.8298 1.59091C15.0431 1.53167 15.268 1.5 15.5002 1.5C16.8809 1.5 18.0002 2.61929 18.0002 4V4.55001C18.1618 4.51722 18.329 4.5 18.5002 4.5C19.8809 4.5 21.0002 5.61929 21.0002 7V15.5002Z"></path></svg>      
+          </div>
+          <h3 class="feature__title">Touch & Drag</h3>
+          <p class="feature__description">Mobile-friendly swipe gestures and mouse drag support</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path></svg>
+          </div>
+          <h3 class="feature__title">Responsive</h3>
+          <p class="feature__description">Breakpoint-based configuration for all screen sizes</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L5.24077 18.9999C5.0786 19.912 4.99805 20.907 4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3ZM12.998 5C8.57977 5 4.99805 8.58172 4.99805 13C4.99805 13.3624 5.00125 13.7111 5.00759 14.0459C6.26198 12.0684 8.09902 10.5048 10.5019 9.13176L11.4942 10.8682C8.6393 12.4996 6.74554 14.3535 5.77329 16.9998L8.99805 17C15.0132 17 18.8692 13.0269 18.9949 5.38766C17.6229 5.52113 16.3481 5.436 14.7754 5.20009C13.6243 5.02742 13.3988 5 12.998 5Z"></path></svg>
+          </div>
+          <h3 class="feature__title">Lightweight</h3>
+          <p class="feature__description">Less than 10KB gzipped with zero dependencies</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3944 12.0001L10 7.7371V16.263L16.3944 12.0001ZM19.376 12.4161L8.77735 19.4818C8.54759 19.635 8.23715 19.5729 8.08397 19.3432C8.02922 19.261 8 19.1645 8 19.0658V4.93433C8 4.65818 8.22386 4.43433 8.5 4.43433C8.59871 4.43433 8.69522 4.46355 8.77735 4.5183L19.376 11.584C19.6057 11.7372 19.6678 12.0477 19.5146 12.2774C19.478 12.3323 19.4309 12.3795 19.376 12.4161Z"></path></svg>
+          </div>
+          <h3 class="feature__title">Autoplay</h3>
+          <p class="feature__description">Optional automatic sliding with configurable intervals</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.05033 14.1213L4.929 16.2427L7.75743 19.0711L19.0711 7.75737L16.2427 4.92894L14.1214 7.05026L15.5356 8.46448L14.1214 9.87869L12.7072 8.46448L11.293 9.87869L12.7072 11.2929L11.293 12.7071L9.87875 11.2929L8.46454 12.7071L9.87875 14.1213L8.46454 15.5355L7.05033 14.1213ZM16.9498 2.80762L21.1925 7.05026C21.583 7.44079 21.583 8.07395 21.1925 8.46448L8.46454 21.1924C8.07401 21.5829 7.44085 21.5829 7.05033 21.1924L2.80768 16.9498C2.41716 16.5592 2.41716 15.9261 2.80768 15.5355L15.5356 2.80762C15.9261 2.4171 16.5593 2.4171 16.9498 2.80762ZM14.1214 18.3635L15.5356 16.9493L17.7781 19.1918H19.1923V17.7776L16.9498 15.5351L18.364 14.1208L20.9997 16.7565V20.9999H16.7578L14.1214 18.3635ZM5.63597 9.87806L2.80754 7.04963C2.41702 6.65911 2.41702 6.02594 2.80754 5.63542L5.63597 2.80699C6.02649 2.41647 6.65966 2.41647 7.05018 2.80699L9.87861 5.63542L8.4644 7.04963L6.34308 4.92831L4.92886 6.34253L7.05018 8.46385L5.63597 9.87806Z"></path></svg>
+          </div>
+          <h3 class="feature__title">Customizable</h3>
+          <p class="feature__description">Flexible API with extensive configuration options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOS SECTION -->
+
+  <!-- BASIC CAROUSEL -->
+  <section 
+    class="section demo" 
+    id="demo-basic"
+  >
+    <div 
+      class="section__container"
+      data-aos="zoom-up"
+      data-aos-duration="1000"
+      data-aos-delay="300" 
+    >
+      <div class="demo__wrapper">
+        <div class="demo__header">
+          <h3 class="demo__title">Basic Carousel</h3>
+          <p class="demo__description">Simple full-width carousel with infinite loop and autoplay</p>
+        </div>
+
+        <div class="demo__preview">
+          <div class="demo-basic">
+            <div class="demo-basic__gallery">
+              <div class="demo-basic__inner">
+                <div class="demo-basic__slide">
+                  <img src="/docs/assets/images/carousel-one.png" alt="Carousel 1" class="demo-basic__image">
+                </div>
+                <div class="demo-basic__slide">
+                  <img src="/docs/assets/images/carousel-two.png" alt="Carousel 2" class="demo-basic__image">
+                </div>
+                <div class="demo-basic__slide">
+                  <img src="/docs/assets/images/carousel-three.png" alt="Carousel 3" class="demo-basic__image">
+                </div>
+              </div>
+            </div>
+
+            <button class="demo__arrow demo__arrow--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
+            </button>
+
+            <button class="demo__arrow demo__arrow--next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+            </button>
+
+            <div class="demo__pagination"></div>
+          </div>
+        </div>
+
+        <div class="demo__code">
+          <div class="demo__tabs">
+            <button class="demo__tab demo__tab--active" data-demo="basic" data-tab="html">HTML</button>
+            <button class="demo__tab" data-demo="basic" data-tab="css">CSS</button>
+            <button class="demo__tab" data-demo="basic" data-tab="js">JavaScript</button>
+          </div>
+          
+          <div class="demo__code-content demo__code-content--active" data-demo="basic" data-content="html">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+&lt;div class="carousel"&gt;
+  &lt;div class="carousel__inner"&gt;
+    &lt;div class="carousel__slide"&gt;
+      &lt;img src="banner1.jpg" alt="Banner 1"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel__slide"&gt;
+      &lt;img src="banner2.jpg" alt="Banner 2"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel__slide"&gt;
+      &lt;img src="banner3.jpg" alt="Banner 3"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class="carousel__arrow carousel__arrow--prev"&gt;←&lt;/button&gt;
+&lt;button class="carousel__arrow carousel__arrow--next"&gt;→&lt;/button&gt;
+&lt;div class="carousel__pagination"&gt;&lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="basic" data-content="css">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__inner {
+  display: flex;
+  gap: 5px;
+  transition: transform 0.4s ease;
+}
+
+.carousel__slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.carousel__arrow:hover {
+  background: #f5f5f5;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel__arrow--prev {
+  left: 16px;
+}
+
+.carousel__arrow--next {
+  right: 16px;
+}
+
+.carousel__pagination {
+  width: max-content;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.merrygo-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #CED1D3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.merrygo-bullet-active {
+  background: #000000;
+}
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="basic" data-content="js">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+const carousel = new MerryGo({
+  gallery: document.querySelector('.carousel'),
+  galleryInner: document.querySelector('.carousel__inner'),
+  prevBtn: document.querySelector('.carousel__arrow--prev'),
+  nextBtn: document.querySelector('.carousel__arrow--next'),
+  pagination: document.querySelector('.carousel__pagination'),
+  gap: 5,
+  autoplay: 5000,
+  infinityLoop: true
+});
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <a href="/examples/basic.html" class="demo__link">
+          View Full Example
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS CAROUSEL -->
+  <section class="section demo" id="demo-products">
+    <div 
+      class="section__container"
+      data-aos="zoom-up"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+    >
+      <div class="demo__wrapper">
+        <div class="demo__header">
+          <h3 class="demo__title">Products Carousel</h3>
+          <p class="demo__description">Multiple slides visible with responsive breakpoints</p>
+        </div>
+
+        <div class="demo__preview">
+          <div class="demo-products">
+            <img 
+              src="/docs/assets/images/carousel-three.png"
+              alt="Merry Go Round Image"
+              class="demo-products__background"
+            />  
+
+            <div class="demo-products__gallery">
+              <div class="demo-products__inner">
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/merrygoround.png" alt="Image of a Merry-Go-Round">
+                    </div>
+                    <h4 class="demo-product-card__title">Merry-Go-Round</h4>
+                    <p class="demo-product-card__price">$4.00</p>
+                  </div>
+                </div>
+
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/ferriswheel.png" alt="Image of a Ferris Wheel">
+                    </div>
+                    <h4 class="demo-product-card__title">Ferris Wheel</h4>
+                    <p class="demo-product-card__price">$6.00</p>
+                  </div>
+                </div>
+
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/rollercoaster.png" alt="Image of a Roller Coaster">
+                    </div>
+                    <h4 class="demo-product-card__title">Roller Coaster</h4>
+                    <p class="demo-product-card__price">$8.00</p>
+                  </div>
+                </div>
+
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/funhouse.png" alt="Image of a Fun House">
+                    </div>
+                    <h4 class="demo-product-card__title">Fun House</h4>
+                    <p class="demo-product-card__price">$5.00</p>
+                  </div>
+                </div>
+
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/bumpercars.png" alt="Image of Bumper Cars">
+                    </div>
+                    <h4 class="demo-product-card__title">Bumper Cars</h4>
+                    <p class="demo-product-card__price">$5.00</p>
+                  </div>
+                </div>
+
+                <div class="demo-products__slide">
+                  <div class="demo-product-card">
+                    <div class="demo-product-card__image-wrapper">
+                      <img src="/docs/assets/images/swingride.png" alt="Image of a Swing Ride">
+                    </div>
+                    <h4 class="demo-product-card__title">Swing Ride</h4>
+                    <p class="demo-product-card__price">$6.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="demo__arrow demo__arrow--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
+            </button>
+
+            <button class="demo__arrow demo__arrow--next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+            </button>
+
+            <div class="demo__pagination"></div>
+          </div>
+        </div>
+
+        <div class="demo__code">
+          <div class="demo__tabs">
+            <button class="demo__tab demo__tab--active" data-demo="products" data-tab="html">HTML</button>
+            <button class="demo__tab" data-demo="products" data-tab="css">CSS</button>
+            <button class="demo__tab" data-demo="products" data-tab="js">JavaScript</button>
+          </div>
+
+          <div class="demo__code-content demo__code-content--active" data-demo="products" data-content="html">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+&lt;div class="products-carousel"&gt;
+  &lt;div class="products-carousel__inner"&gt;
+    &lt;div class="products-carousel__slide"&gt;Product 1&lt;/div&gt;
+    &lt;div class="products-carousel__slide"&gt;Product 2&lt;/div&gt;
+    &lt;div class="products-carousel__slide"&gt;Product 3&lt;/div&gt;
+    &lt;!-- more slides --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class="products-carousel__arrow products-carousel__arrow--prev"&gt;←&lt;/button&gt;
+&lt;button class="products-carousel__arrow products-carousel__arrow--next"&gt;→&lt;/button&gt;
+&lt;div class="products-carousel__pagination"&gt;&lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="products" data-content="css">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+.products-carousel {
+  overflow: hidden;
+  user-select: none;
+}
+
+.products-carousel__inner {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+}
+
+.products-carousel__slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: calc((100% - 60px) / 4); /* 4 visible */
+}
+
+.products-carousel__arrow {
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 800px;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0px 1px 8px 0px #0000001F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.products-carousel__arrow:hover {
+  background: #f5f5f5;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.products-carousel__arrow--prev {
+  left: 16px;
+}
+
+.products-carousel__arrow--next {
+  right: 16px;
+}
+
+.products-carousel__pagination {
+  width: max-content;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.merrygo-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #CED1D3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.merrygo-bullet-active {
+  background: #000000;
+}
+
+@media (max-width: 1024px) {
+  .products-carousel__inner { 
+    gap: 15px; 
+  }
+
+  .products-carousel__slide { 
+    width: calc((100% - 30px) / 3);  /* 3 visible */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-carousel__slide { 
+    width: calc((100% - 15px) / 2); /* 2 visible */
+  } 
+}
+
+@media (max-width: 560px) {
+  .products-carousel__inner { 
+    gap: 0; 
+  }
+
+  .products-carousel__slide { 
+    width: 100%; /* 1 visible */
+  }
+}
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="products" data-content="js">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+const carousel = new MerryGo({
+  gallery: document.querySelector('.products-carousel'),
+  galleryInner: document.querySelector('.products-carousel__inner'),
+  prevBtn: document.querySelector('.products-carousel__arrow--prev'),
+  nextBtn: document.querySelector('.products-carousel__arrow--next'),
+  pagination: document.querySelector('.products-carousel__arrow--next'),
+  infinityLoop: false,
+  breakpoints: {
+    0: { slidesVisible: 1, gap: 0 },
+    561: { slidesVisible: 2, gap: 15 },
+    769: { slidesVisible: 3, gap: 15 },
+    1025: { slidesVisible: 4, gap: 20 }
+  }
+});
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <a href="/examples/products.html" class="demo__link">
+          View Full Example
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THUMBNAILS CAROUSEL -->
+  <section class="section demo" id="demo-thumbnails">
+    <div 
+      class="section__container"
+      data-aos="zoom-up"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+    >
+      <div class="demo__wrapper">
+        <div class="demo__header">
+          <h3 class="demo__title">Gallery with Thumbnails</h3>
+          <p class="demo__description">Synchronized carousel with clickable thumbnail navigation</p>
+        </div>
+
+        <div class="demo__preview">
+          <div class="demo-thumbnails">
+            <div class="demo-thumbnails__main">
+              <div class="demo-thumbnails__main-inner">
+                <div class="demo-thumbnails__main-slide">
+                  <img src="/docs/assets/images/carousel-one.png" alt="Gallery 1">
+                </div>
+                <div class="demo-thumbnails__main-slide">
+                  <img src="/docs/assets/images/carousel-two.png" alt="Gallery 2">
+                </div>
+                <div class="demo-thumbnails__main-slide">
+                  <img src="/docs/assets/images/carousel-three.png" alt="Gallery 3">
+                </div>
+              </div>
+
+              <button class="demo__arrow demo__arrow--prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg>
+              </button>
+
+              <button class="demo__arrow demo__arrow--next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+              </button>
+            </div>
+
+            <div class="demo-thumbnails__thumbs">
+              <input type="radio" name="demo-thumb" id="demo-thumb-0" checked>
+              <label class="demo-thumbnails__thumb" for="demo-thumb-0">
+                <img src="/docs/assets/images/carousel-one.png" alt="Thumb 1">
+              </label>
+
+              <input type="radio" name="demo-thumb" id="demo-thumb-1">
+              <label class="demo-thumbnails__thumb" for="demo-thumb-1">
+                <img src="/docs/assets/images/carousel-two.png" alt="Thumb 2">
+              </label>
+
+              <input type="radio" name="demo-thumb" id="demo-thumb-2">
+              <label class="demo-thumbnails__thumb" for="demo-thumb-2">
+                <img src="/docs/assets/images/carousel-three.png" alt="Thumb 3">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo__code">
+          <div class="demo__tabs">
+            <button class="demo__tab demo__tab--active" data-demo="thumbnails" data-tab="html">HTML</button>
+            <button class="demo__tab" data-demo="thumbnails" data-tab="css">CSS</button>
+            <button class="demo__tab" data-demo="thumbnails" data-tab="js">JavaScript</button>
+          </div>
+
+          <div class="demo__code-content demo__code-content--active" data-demo="thumbnails" data-content="html">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+&lt;!-- Thumbnails --&gt;
+&lt;div class="gallery__thumbnails"&gt;
+  &lt;input type="radio" name="thumb" id="thumb-0" checked&gt;
+  &lt;label class="gallery__thumbnail" for="thumb-0"&gt;
+    &lt;img src="image1.jpg"&gt;
+  &lt;/label&gt;
+
+  &lt;input type="radio" name="thumb" id="thumb-1" checked&gt;
+  &lt;label class="gallery__thumbnail" for="thumb-1"&gt;
+    &lt;img src="image2.jpg"&gt;
+  &lt;/label&gt;
+
+  &lt;input type="radio" name="thumb" id="thumb-2" checked&gt;
+  &lt;label class="gallery__thumbnail" for="thumb-2"&gt;
+    &lt;img src="image3.jpg"&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Main Gallery --&gt;
+&lt;div class="gallery"&gt;
+  &lt;div class="gallery__inner"&gt;
+    &lt;div class="gallery__slide"&gt;
+      &lt;img src="image1.jpg"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="gallery__slide"&gt;
+      &lt;img src="image2.jpg"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="gallery__slide"&gt;
+      &lt;img src="image3.jpg"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class="gallery__arrow gallery__arrow--prev"&gt;←&lt;/button&gt;
+&lt;button class="gallery__arrow gallery__arrow--next"&gt;→&lt;/button&gt;
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="thumbnails" data-content="css">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+.gallery {
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.gallery__inner {
+  display: flex;
+  gap: 5px;
+  transition: transform 0.4s ease;
+}
+
+.gallery__slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.gallery__arrow {
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 800px;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0px 1px 8px 0px #0000001F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.gallery__arrow:hover {
+  background: #f5f5f5;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.gallery__arrow--prev {
+  left: 16px;
+}
+
+.gallery__arrow--next {
+  right: 16px;
+}
+
+.gallery__thumbnails {
+  width: 80px;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gallery__thumbnails input[type="radio"] {
+  display: none;
+}
+
+.gallery__thumbnail {
+  width: 100%;
+  height: 80px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gallery__thumbnails input:checked + .gallery__thumbnail {
+  border-color: #000000;
+}
+
+.gallery__thumbnail:hover {
+  border-color: #82898E;
+}
+
+.gallery__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+              </code>
+            </pre>
+          </div>
+
+          <div class="demo__code-content" data-demo="thumbnails" data-content="js">
+            <button class="demo__copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>
+              <code>
+const thumbInputs = Array.from(
+  document.querySelectorAll('.gallery__thumbnails input[type="radio"]')
+);
+
+const carousel = new MerryGo({
+  gallery: document.querySelector('.gallery'),
+  galleryInner: document.querySelector('.gallery__inner'),
+  thumbs: thumbInputs, // Array of radio inputs
+  gap: 5,
+  prevBtn: document.querySelector(.gallery__arrow--prev'),
+  nextBtn: document.querySelector('.gallery__arrow--next'),
+});
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <a href="/examples/thumbnails.html" class="demo__link">
+          View Full Example
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED SECTION -->
+  <section class="section get-started" id="get-started">
+    <div class="section__container">
+      <div 
+        class="section__header"
+        data-aos="zoom-up"
+        data-aos-duration="1000"
+        data-aos-delay="300"
+      >
+        <h2 class="section__title">Get Started</h2>
+        <p class="section__subtitle">Install MerryGo and start to create!</p>
+      </div>
+
+      <div class="get-started__content">
+        <!-- Installation -->
+        <div  
+          class="get-started__block"
+          data-aos="zoom-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+        >
+          <h3 class="get-started__block-title">Installation</h3>
+          
+          <div class="get-started__tabs">
+            <button class="get-started__tab get-started__tab--active" data-install="cdn">CDN</button>
+            <button class="get-started__tab" data-install="npm">NPM</button>
+          </div>
+
+          <div class="get-started__install-content get-started__install-content--active" data-install-content="cdn">
+            <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/merrygo@1.0.0/dist/merrygo.min.js"&gt;&lt;/script&gt;</code></pre>
+            <button class="get-started__copy-btn" onclick="copyInstallCode(this)">Copy</button>
+          </div>
+
+          <div class="get-started__install-content" data-install-content="npm">
+            <pre><code>npm install merrygo</code></pre>
+            <button class="get-started__copy-btn" onclick="copyInstallCode(this)">Copy</button>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div 
+          class="get-started__links"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="500"
+        >
+          <a href="/docs/documentation.html" class="get-started__link get-started__link--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V4H5V20H19ZM7 6H11V10H7V6ZM7 12H17V14H7V12ZM7 16H17V18H7V16ZM13 7H17V9H13V7Z"></path></svg>
+            Full Documentation
+          </a>
+
+          <a href="https://github.com/matheus-braga6/merrygo" target="_blank" class="get-started__link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__title-container">
+        <h2 class="footer__title">MerryGo</h2>
+        <img 
+          src="/docs/assets/icons/circle.svg" 
+          alt="MerryGo Logo" 
+          class="footer__logo"
+        >
+      </div>
+
+      <p class="footer__tagline">JavaScript Carousel Library</p>
+
+      <div class="footer__links">
+        <a href="https://github.com/matheus-braga6/merrygo" class="footer__link" target="_blank">GitHub</a>
+        <a href="/docs/documentation.html" class="footer__link">Documentation</a>
+        <a href="https://www.npmjs.com/package/merrygo" class="footer__link" target="_blank">NPM</a>
+      </div>
+
+      <div class="footer__credits">
+        <p>Made with ❤️ inspired by the joy of merry-go-rounds</p>
+        <p>Licensed under MIT • © <span id="current-year"></span></p>
+      </div>
+    </div>
+
+    <div class="footer__assign" title="Desenvolvido por MB Development">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" zoomAndPan="magnify" viewBox="0 0 337.5 337.500003" height="450" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/><clipPath id="7aa9f081cb"><rect x="0" width="337" y="0" height="305"/></clipPath><clipPath id="b54f7ff7b3"><path d="M 249 16 L 265.753906 16 L 265.753906 45 L 249 45 Z M 249 16 " clip-rule="nonzero"/></clipPath><clipPath id="7a351ae9d0"><rect x="0" width="266" y="0" height="57"/></clipPath></defs><g transform="matrix(1, 0, 0, 1, 0, 17)"><g clip-path="url(#7aa9f081cb)"><g fill="currentColor" fill-opacity="1"><g transform="translate(3.928828, 229.92809)"><g><path d="M 200.734375 19.515625 C 197.523438 17.554688 195.472656 15.0625 194.578125 12.03125 C 193.691406 9 193.515625 3.832031 194.046875 -3.46875 C 194.585938 -11.3125 195.035156 -19.066406 195.390625 -26.734375 C 195.742188 -34.390625 195.921875 -41.601562 195.921875 -48.375 C 195.921875 -61.03125 195.472656 -71.457031 194.578125 -79.65625 C 193.691406 -88.03125 192.445312 -92.394531 190.84375 -92.75 C 189.0625 -93.28125 184.875 -88.554688 178.28125 -78.578125 C 171.507812 -68.597656 164.914062 -57.195312 158.5 -44.375 C 151.726562 -30.832031 146.5625 -22.1875 143 -18.4375 C 139.4375 -14.519531 134.800781 -12.738281 129.09375 -13.09375 C 125.175781 -13.445312 121.878906 -14.875 119.203125 -17.375 C 116.535156 -20.050781 114.578125 -23.613281 113.328125 -28.0625 C 112.078125 -32.695312 111.273438 -39.644531 110.921875 -48.90625 C 110.566406 -58.175781 110.476562 -74.304688 110.65625 -97.296875 C 110.832031 -108.515625 110.832031 -118.671875 110.65625 -127.765625 C 110.476562 -136.847656 110.125 -144.066406 109.59375 -149.421875 C 109.414062 -153.160156 109.234375 -155.5625 109.046875 -156.625 C 108.691406 -157.695312 108.25 -158.054688 107.71875 -157.703125 C 107.1875 -157.160156 105.046875 -151.632812 101.296875 -141.125 C 97.554688 -130.613281 93.015625 -116.984375 87.671875 -100.234375 C 83.390625 -87.578125 79.644531 -76.53125 76.4375 -67.09375 C 73.238281 -57.644531 70.300781 -49.535156 67.625 -42.765625 C 62.8125 -30.296875 58.625 -21.472656 55.0625 -16.296875 C 51.675781 -11.128906 47.84375 -7.476562 43.5625 -5.34375 C 41.25 -4.269531 38.84375 -3.644531 36.34375 -3.46875 C 34.03125 -3.46875 31.628906 -3.914062 29.140625 -4.8125 C 22.179688 -7.488281 16.832031 -14.882812 13.09375 -27 C 9.351562 -39.113281 6.054688 -59.875 3.203125 -89.28125 C 2.671875 -94.082031 2.050781 -100.050781 1.34375 -107.1875 C 0.625 -114.488281 0 -120.8125 -0.53125 -126.15625 C -1.425781 -135.25 -1.875 -141.578125 -1.875 -145.140625 L -1.875 -147.015625 C -1.695312 -150.035156 -0.535156 -152.617188 1.609375 -154.765625 C 3.210938 -156.546875 4.992188 -157.878906 6.953125 -158.765625 C 8.734375 -159.484375 10.957031 -159.753906 13.625 -159.578125 C 17.375 -159.210938 20.40625 -157.875 22.71875 -155.5625 C 25.03125 -153.25 26.457031 -150.128906 27 -146.203125 C 27.175781 -145.140625 27.617188 -141.222656 28.328125 -134.453125 C 29.046875 -127.671875 29.757812 -120.09375 30.46875 -111.71875 C 32.789062 -89.09375 34.484375 -73.238281 35.546875 -64.15625 C 36.796875 -55.0625 37.773438 -50.515625 38.484375 -50.515625 C 39.023438 -50.335938 40.539062 -53.722656 43.03125 -60.671875 C 45.53125 -67.617188 49.894531 -80.628906 56.125 -99.703125 C 63.257812 -121.441406 68.609375 -137.117188 72.171875 -146.734375 C 75.554688 -156.535156 78.582031 -164.46875 81.25 -170.53125 C 85 -179.257812 88.566406 -186.03125 91.953125 -190.84375 C 95.160156 -195.65625 98.722656 -199.21875 102.640625 -201.53125 C 104.597656 -202.601562 106.113281 -203.316406 107.1875 -203.671875 C 108.25 -203.847656 109.757812 -203.9375 111.71875 -203.9375 L 112.265625 -203.9375 C 123.304688 -203.757812 130.789062 -196.097656 134.71875 -180.953125 C 138.8125 -165.804688 140.59375 -138.539062 140.0625 -99.15625 L 140.0625 -80.453125 C 140.238281 -77.421875 140.503906 -75.90625 140.859375 -75.90625 C 141.035156 -75.90625 141.75 -76.796875 143 -78.578125 C 144.25 -80.359375 145.585938 -82.5 147.015625 -85 C 152.890625 -94.976562 158.859375 -103.175781 164.921875 -109.59375 C 170.972656 -116 176.851562 -120.363281 182.5625 -122.6875 C 185.050781 -123.75 187.007812 -124.375 188.4375 -124.5625 C 189.863281 -124.738281 192.179688 -124.738281 195.390625 -124.5625 C 198.597656 -124.195312 200.820312 -123.835938 202.0625 -123.484375 C 203.3125 -123.128906 204.828125 -122.328125 206.609375 -121.078125 C 209.640625 -119.296875 212.222656 -116.890625 214.359375 -113.859375 C 216.679688 -110.835938 218.554688 -107.1875 219.984375 -102.90625 C 222.828125 -94.53125 224.519531 -83.035156 225.0625 -68.421875 C 225.238281 -63.785156 225.328125 -58.617188 225.328125 -52.921875 C 225.328125 -40.984375 224.878906 -26.90625 223.984375 -10.6875 C 223.628906 -1.425781 223.273438 4.539062 222.921875 7.21875 C 222.742188 9.882812 222.296875 11.929688 221.578125 13.359375 C 220.515625 15.316406 219.445312 16.742188 218.375 17.640625 C 217.300781 18.710938 215.785156 19.691406 213.828125 20.578125 C 212.222656 21.117188 210.53125 21.390625 208.75 21.390625 L 207.421875 21.390625 C 204.921875 21.203125 202.691406 20.578125 200.734375 19.515625 Z M 200.734375 19.515625 "/></g></g><g transform="translate(233.791655, 229.92809)"><g><path d="M 16.578125 -198.328125 C 22.984375 -198.328125 30.195312 -197.703125 38.21875 -196.453125 C 46.0625 -195.203125 52.921875 -193.597656 58.796875 -191.640625 C 63.972656 -189.859375 68.253906 -187.988281 71.640625 -186.03125 C 75.203125 -184.070312 78.765625 -181.488281 82.328125 -178.28125 C 87.671875 -173.46875 91.5 -168.390625 93.8125 -163.046875 C 96.3125 -157.523438 97.472656 -151.285156 97.296875 -144.328125 C 97.296875 -135.773438 95.242188 -127.3125 91.140625 -118.9375 C 87.046875 -110.738281 80.988281 -102.8125 72.96875 -95.15625 C 70.476562 -92.65625 68.875 -90.875 68.15625 -89.8125 C 67.625 -88.738281 67.984375 -88.203125 69.234375 -88.203125 C 69.585938 -88.203125 70.566406 -87.847656 72.171875 -87.140625 C 73.773438 -86.597656 75.554688 -85.882812 77.515625 -85 C 91.410156 -78.9375 99.160156 -69.132812 100.765625 -55.59375 C 100.941406 -53.988281 101.03125 -52.296875 101.03125 -50.515625 C 101.207031 -38.929688 96.128906 -28.148438 85.796875 -18.171875 C 79.921875 -12.296875 72.707031 -7.394531 64.15625 -3.46875 C 55.59375 0.269531 46.320312 2.851562 36.34375 4.28125 C 31.71875 4.8125 28.691406 5.164062 27.265625 5.34375 L 24.59375 5.34375 C 24.414062 5.34375 24.054688 5.253906 23.515625 5.078125 C 22.804688 4.898438 22.1875 4.8125 21.65625 4.8125 C 20.226562 4.457031 18.535156 3.476562 16.578125 1.875 C 14.429688 0.269531 13.09375 -1.242188 12.5625 -2.671875 C 11.851562 -4.097656 11.5 -5.789062 11.5 -7.75 C 11.5 -9.53125 11.765625 -11.222656 12.296875 -12.828125 C 12.648438 -13.722656 12.738281 -15.148438 12.5625 -17.109375 C 12.5625 -19.066406 12.207031 -22.363281 11.5 -27 C 10.957031 -30.738281 10.421875 -35.101562 9.890625 -40.09375 C 9.359375 -45.257812 8.734375 -50.875 8.015625 -56.9375 C 6.953125 -67.976562 5.972656 -80.269531 5.078125 -93.8125 C 4.003906 -107.175781 3.203125 -120.363281 2.671875 -133.375 C 1.960938 -146.382812 1.335938 -158.054688 0.796875 -168.390625 C 0.265625 -178.722656 0 -184.691406 0 -186.296875 C 0 -188.078125 0.625 -189.945312 1.875 -191.90625 C 2.9375 -193.875 4.453125 -195.476562 6.421875 -196.71875 C 7.484375 -197.4375 8.550781 -197.882812 9.625 -198.0625 C 10.507812 -198.238281 12.113281 -198.414062 14.4375 -198.59375 C 14.789062 -198.59375 15.144531 -198.503906 15.5 -198.328125 Z M 31 -170 C 31 -167.320312 31.085938 -163.222656 31.265625 -157.703125 C 31.265625 -155.203125 31.359375 -151.726562 31.546875 -147.28125 C 31.722656 -142.644531 31.898438 -137.832031 32.078125 -132.84375 C 32.429688 -125.351562 32.875 -118.40625 33.40625 -112 C 33.769531 -105.40625 34.039062 -101.925781 34.21875 -101.5625 C 34.570312 -100.675781 35.191406 -100.5 36.078125 -101.03125 C 36.972656 -101.382812 38.9375 -102.8125 41.96875 -105.3125 C 48.019531 -109.945312 52.921875 -114.398438 56.671875 -118.671875 C 60.410156 -123.128906 63.347656 -127.765625 65.484375 -132.578125 C 66.378906 -134.890625 67.003906 -136.757812 67.359375 -138.1875 C 67.710938 -139.613281 67.890625 -141.660156 67.890625 -144.328125 C 67.890625 -146.296875 67.710938 -148.082031 67.359375 -149.6875 C 67.179688 -151.101562 66.914062 -152.257812 66.5625 -153.15625 C 65.488281 -155.289062 63.789062 -157.429688 61.46875 -159.578125 C 58.976562 -161.710938 56.394531 -163.3125 53.71875 -164.375 C 51.226562 -165.625 47.84375 -166.785156 43.5625 -167.859375 C 39.289062 -168.921875 35.90625 -169.632812 33.40625 -170 Z M 37.421875 -64.15625 C 37.242188 -63.96875 37.242188 -62.984375 37.421875 -61.203125 C 37.421875 -59.421875 37.507812 -57.285156 37.6875 -54.796875 C 38.394531 -48.203125 39.195312 -41.875 40.09375 -35.8125 C 40.800781 -29.582031 41.242188 -26.195312 41.421875 -25.65625 C 41.785156 -24.945312 42.679688 -24.769531 44.109375 -25.125 C 45.523438 -25.300781 47.925781 -26.191406 51.3125 -27.796875 C 57.375 -30.472656 62.273438 -33.945312 66.015625 -38.21875 C 69.578125 -42.5 71.359375 -46.6875 71.359375 -50.78125 C 71.359375 -53.988281 70.46875 -56.484375 68.6875 -58.265625 C 66.726562 -60.046875 63.613281 -61.5625 59.34375 -62.8125 C 56.84375 -63.34375 53.632812 -63.789062 49.71875 -64.15625 C 45.789062 -64.507812 42.671875 -64.6875 40.359375 -64.6875 L 38.484375 -64.6875 C 37.953125 -64.507812 37.597656 -64.332031 37.421875 -64.15625 Z M 37.421875 -64.15625 "/></g></g></g></g></g><g transform="matrix(1, 0, 0, 1, 35, 274)"><g clip-path="url(#7a351ae9d0)"><g fill="currentColor" fill-opacity="1"><g transform="translate(1.291913, 44.589161)"><g><path d="M 9.9375 -27.984375 C 15.03125 -27.984375 18.878906 -26.8125 21.484375 -24.46875 C 24.097656 -22.132812 25.40625 -18.65625 25.40625 -14.03125 C 25.40625 -9.113281 24.097656 -5.546875 21.484375 -3.328125 C 18.878906 -1.109375 15.054688 0 10.015625 0 L 3.203125 0 L 3.203125 -27.984375 Z M 10.953125 -5.21875 C 13.890625 -5.21875 16.132812 -5.945312 17.6875 -7.40625 C 19.25 -8.863281 20.03125 -11.109375 20.03125 -14.140625 C 20.03125 -15.984375 19.640625 -17.546875 18.859375 -18.828125 C 18.078125 -20.117188 16.957031 -21.09375 15.5 -21.75 C 14.050781 -22.414062 12.328125 -22.75 10.328125 -22.75 L 8.53125 -22.75 L 8.53125 -5.21875 Z M 10.953125 -5.21875 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(28.490589, 44.589161)"><g><path d="M 3.203125 -27.984375 L 18.46875 -27.984375 L 18.46875 -22.796875 L 8.53125 -22.796875 L 8.53125 -17.6875 L 18.46875 -17.6875 L 18.46875 -12.625 L 8.53125 -12.625 L 8.53125 -5.21875 L 18.46875 -5.21875 L 18.46875 0 L 3.203125 0 Z M 3.203125 -27.984375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(48.714259, 44.589161)"><g><path d="M 1.046875 -27.984375 L 6.546875 -27.984375 L 13.5625 -8.109375 L 20.734375 -27.984375 L 26.1875 -27.984375 L 16.09375 0 L 10.984375 0 Z M 1.046875 -27.984375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(75.99087, 44.589161)"><g><path d="M 3.203125 -27.984375 L 18.46875 -27.984375 L 18.46875 -22.796875 L 8.53125 -22.796875 L 8.53125 -17.6875 L 18.46875 -17.6875 L 18.46875 -12.625 L 8.53125 -12.625 L 8.53125 -5.21875 L 18.46875 -5.21875 L 18.46875 0 L 3.203125 0 Z M 3.203125 -27.984375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(96.21454, 44.589161)"><g><path d="M 8.53125 -27.984375 L 8.53125 -5.0625 L 16.28125 -5.0625 L 16.28125 0 L 3.203125 0 L 3.203125 -27.984375 Z M 8.53125 -27.984375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(112.190836, 44.589161)"><g><path d="M 16.484375 0.65625 C 13.753906 0.65625 11.269531 0.00390625 9.03125 -1.296875 C 6.800781 -2.609375 5.039062 -4.390625 3.75 -6.640625 C 2.46875 -8.890625 1.828125 -11.351562 1.828125 -14.03125 C 1.828125 -16.726562 2.484375 -19.203125 3.796875 -21.453125 C 5.109375 -23.703125 6.878906 -25.46875 9.109375 -26.75 C 11.347656 -28.039062 13.78125 -28.6875 16.40625 -28.6875 C 18.976562 -28.6875 21.375 -28.039062 23.59375 -26.75 C 25.8125 -25.46875 27.585938 -23.703125 28.921875 -21.453125 C 30.265625 -19.203125 30.9375 -16.6875 30.9375 -13.90625 C 30.9375 -11.207031 30.289062 -8.75 29 -6.53125 C 27.71875 -4.3125 25.972656 -2.554688 23.765625 -1.265625 C 21.554688 0.015625 19.128906 0.65625 16.484375 0.65625 Z M 16.4375 -4.4375 C 18.101562 -4.4375 19.628906 -4.859375 21.015625 -5.703125 C 22.410156 -6.546875 23.515625 -7.695312 24.328125 -9.15625 C 25.148438 -10.613281 25.5625 -12.210938 25.5625 -13.953125 C 25.5625 -15.660156 25.164062 -17.25 24.375 -18.71875 C 23.582031 -20.1875 22.484375 -21.363281 21.078125 -22.25 C 19.679688 -23.132812 18.109375 -23.578125 16.359375 -23.578125 C 14.703125 -23.578125 13.171875 -23.164062 11.765625 -22.34375 C 10.367188 -21.53125 9.257812 -20.390625 8.4375 -18.921875 C 7.613281 -17.453125 7.203125 -15.78125 7.203125 -13.90625 C 7.203125 -12.0625 7.625 -10.414062 8.46875 -8.96875 C 9.320312 -7.53125 10.445312 -6.414062 11.84375 -5.625 C 13.25 -4.832031 14.78125 -4.4375 16.4375 -4.4375 Z M 16.4375 -4.4375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(144.922784, 44.589161)"><g><path d="M 10.203125 -27.984375 C 13.296875 -27.984375 15.679688 -27.316406 17.359375 -25.984375 C 19.035156 -24.660156 19.875 -22.625 19.875 -19.875 C 19.875 -18.1875 19.476562 -16.738281 18.6875 -15.53125 C 17.894531 -14.320312 16.78125 -13.40625 15.34375 -12.78125 C 13.914062 -12.15625 12.28125 -11.84375 10.4375 -11.84375 L 8.53125 -11.84375 L 8.53125 0 L 3.203125 0 L 3.203125 -27.984375 Z M 11.03125 -17.03125 C 13.445312 -17.03125 14.65625 -17.976562 14.65625 -19.875 C 14.65625 -20.8125 14.328125 -21.523438 13.671875 -22.015625 C 13.023438 -22.503906 12.066406 -22.75 10.796875 -22.75 L 8.53125 -22.75 L 8.53125 -17.03125 Z M 11.03125 -17.03125 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(165.185385, 44.589161)"><g><path d="M 33.984375 0 L 28.84375 0 L 26.0625 -16.28125 L 25.84375 -17.734375 L 25.375 -16.359375 L 19.875 0 L 15.203125 0 L 9.78125 -16.328125 L 9.3125 -17.734375 L 9.078125 -16.359375 L 6.234375 0 L 1.046875 0 L 5.890625 -27.984375 L 11.109375 -27.984375 L 17.21875 -9.515625 L 17.578125 -8.421875 L 17.921875 -9.515625 L 24.125 -27.984375 L 29.265625 -27.984375 Z M 33.984375 0 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(200.255324, 44.589161)"><g><path d="M 3.203125 -27.984375 L 18.46875 -27.984375 L 18.46875 -22.796875 L 8.53125 -22.796875 L 8.53125 -17.6875 L 18.46875 -17.6875 L 18.46875 -12.625 L 8.53125 -12.625 L 8.53125 -5.21875 L 18.46875 -5.21875 L 18.46875 0 L 3.203125 0 Z M 3.203125 -27.984375 "/></g></g></g><g fill="currentColor" fill-opacity="1"><g transform="translate(220.478994, 44.589161)"><g><path d="M 20.296875 -27.984375 L 25.640625 -27.984375 L 25.640625 0 L 20.5 0 L 8.53125 -18.3125 L 8.53125 0 L 3.203125 0 L 3.203125 -27.984375 L 8.296875 -27.984375 L 20.296875 -9.625 Z M 20.296875 -27.984375 "/></g></g></g><g clip-path="url(#b54f7ff7b3)"><g fill="currentColor" fill-opacity="1"><g transform="translate(249.314278, 44.589161)"><g><path d="M 5.421875 -22.75 L 0.421875 -22.75 L 0.421875 -27.984375 L 15.90625 -27.984375 L 15.90625 -22.75 L 10.75 -22.75 L 10.75 0 L 5.421875 0 Z M 5.421875 -22.75 "/></g></g></g></g></g></g></svg>    
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById('current-year');
+    yearEl.textContent = new Date().getFullYear();
+  </script>
+  <script src="/dist/merrygo.js"></script>
+  <script src="/docs/js/landing.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
