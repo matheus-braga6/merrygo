@@ -28,7 +28,7 @@ Spin your content with joy. Infinite loops, touch support, and zero dependencies
 
 ### CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.5/dist/merrygo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.6/dist/merrygo.js"></script>
 ```
 
 ### NPM
