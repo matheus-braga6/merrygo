@@ -1,11 +1,15 @@
 {
   "name": "merrygo-carousel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight, performant JavaScript carousel library",
   "main": "dist/merrygo.js",
   "browser": "dist/merrygo.js",
   "jsdelivr": "dist/merrygo.js",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "node build.js"
   },
