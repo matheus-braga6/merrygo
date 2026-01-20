@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/matheus-braga6/merrygo.git"
   },
+  "files": ["dist", "README.md"],
   "keywords": [
     "carousel",
     "slider",
