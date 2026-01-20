@@ -35,15 +35,15 @@
 
 ### Via CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/merrygo@1.0.0/dist/merrygo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.5/dist/merrygo.js"></script>
 ```
 
 ### Via NPM
 ```bash
-npm install merrygo
+npm install merrygo-carousel
 ```
 ```javascript
-import MerryGo from 'merrygo';
+import MerryGo from 'merrygo-carousel';
 ```
 ---
 
