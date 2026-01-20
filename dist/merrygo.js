@@ -417,10 +417,6 @@ class MerryGo {
         this.updateGallery(this.currentIndex);
         this.updatePagination();
 
-        if (window.getSelection) {
-            window.getSelection().removeAllRanges();
-        }
-
         this.restartAutoplay();
     }
 
@@ -437,10 +433,6 @@ class MerryGo {
         this.currentIndex -= this.slidesToScroll;
         this.updateGallery(this.currentIndex);
         this.updatePagination();
-
-        if (window.getSelection) {
-            window.getSelection().removeAllRanges();
-        }
 
         this.restartAutoplay();
     }
