@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Example | MerryGo</title>
-  <link rel="icon" type="image/svg+xml" href="/docs/assets/icons/circle.svg">
-  <link rel="stylesheet" href="/docs/css/all.css">
-  <link rel="stylesheet" href="/docs/css/layout.css">
-  <link rel="stylesheet" href="/examples/css/basic.css">
+  <title>Gallery with Thumbnails | MerryGo</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/circle.svg">
+  <link rel="stylesheet" href="../../css/all.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="./css/thumbnails.css">
 </head>
 
 <body>
   <section class="layout">
     <div class="layout__header">
-      <a class="d-contents" href="/docs/index.html">
+      <a class="d-contents" href="../../index.html">
         <h1 class="layout__header-title">MerryGo</h1>
       </a>
 
       <a 
         class="layout__header-btn"
-        href="/docs/index.html"
+        href="../../index.html"
         aria-label="Back to home"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5812 2.68627C12.2335 2.43791 11.7664 2.43791 11.4187 2.68627L1.9187 9.47198L3.08118 11.0994L11.9999 4.7289L20.9187 11.0994L22.0812 9.47198L12.5812 2.68627ZM19.5812 12.6863L12.5812 7.68627C12.2335 7.43791 11.7664 7.43791 11.4187 7.68627L4.4187 12.6863C4.15591 12.874 3.99994 13.177 3.99994 13.5V20C3.99994 20.5523 4.44765 21 4.99994 21H18.9999C19.5522 21 19.9999 20.5523 19.9999 20V13.5C19.9999 13.177 19.844 12.874 19.5812 12.6863Z"></path></svg>
@@ -45,31 +45,48 @@
     </div>
 
     <div class="carousel">
-      <h2 class="carousel__title">Basic Example</h2>
+      <h2 class="carousel__title">Gallery with Thumbnails</h2>
       <div class="carousel__gallery">
         <div class="carousel__inner">
           <div class="carousel__slide">
             <img 
-              src="/docs/assets/images/carousel-one.png"
+              src="../../assets/images/carousel-one.png"
               alt="Merry Go Round Image"
               class="carousel__image"
             />          
           </div>
           <div class="carousel__slide">
             <img 
-              src="/docs/assets/images/carousel-two.png"
+              src="../../assets/images/carousel-two.png"
               alt="Merry Go Round Image"
               class="carousel__image"
             />          
           </div>
           <div class="carousel__slide">
             <img 
-              src="/docs/assets/images/carousel-three.png"
+              src="../../assets/images/carousel-three.png"
               alt="Merry Go Round Image"
               class="carousel__image"
             />          
           </div>
         </div>
+      </div>
+
+      <div class="carousel__thumbnails">
+        <input type="radio" name="thumb" id="thumb-0" data-index="0" checked>
+        <label class="carousel__thumbnail" for="thumb-0">
+          <img src="../../assets/images/carousel-one.png" alt="Thumbnail 1" class="carousel__thumbnail-image">
+        </label>
+
+        <input type="radio" name="thumb" id="thumb-1" data-index="1">
+        <label class="carousel__thumbnail" for="thumb-1">
+          <img src="../../assets/images/carousel-two.png" alt="Thumbnail 2" class="carousel__thumbnail-image">
+        </label>
+
+        <input type="radio" name="thumb" id="thumb-2" data-index="2">
+        <label class="carousel__thumbnail" for="thumb-2">
+          <img src="../../assets/images/carousel-three.png" alt="Thumbnail 3" class="carousel__thumbnail-image">
+        </label>
       </div>
 
       <button class="carousel__arrow carousel__arrow--prev">
@@ -79,19 +96,17 @@
       <button class="carousel__arrow carousel__arrow--next">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
       </button>
-
-      <div class="carousel__pagination"></div>
     </div>
 
     <ul class="layout__features">
       <li class="layout__features-item">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12C3 10.067 4.567 8.5 6.5 8.5C7.7035 8.5 8.51959 8.9338 9.19914 9.61336C9.9255 10.3397 10.4851 11.3322 11.1258 12.4856L11.1595 12.5462C11.7605 13.6283 12.4431 14.8573 13.3866 15.8009C14.3946 16.8088 15.7035 17.5 17.5 17.5C20.5376 17.5 23 15.0376 23 12C23 8.96243 20.5376 6.5 17.5 6.5C15.8394 6.5 14.3508 7.2359 13.3423 8.39937C13.7887 9.05406 14.1574 9.70577 14.464 10.2574C15.0681 9.20718 16.2014 8.5 17.5 8.5C19.433 8.5 21 10.067 21 12C21 13.933 19.433 15.5 17.5 15.5C16.2965 15.5 15.4804 15.0662 14.8009 14.3866C14.0745 13.6603 13.5149 12.6678 12.8742 11.5144L12.8405 11.4538C12.2395 10.3717 11.5569 9.14265 10.6134 8.19914C9.60541 7.1912 8.2965 6.5 6.5 6.5C3.46243 6.5 1 8.96243 1 12C1 15.0376 3.46243 17.5 6.5 17.5C8.16056 17.5 9.64923 16.7641 10.6577 15.6006C10.2113 14.9459 9.84262 14.2942 9.53605 13.7426C8.93194 14.7928 7.79856 15.5 6.5 15.5C4.567 15.5 3 13.933 3 12Z"></path></svg>
-        Infinite Loop
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>        
+        Thumbnail Sync
       </li>
 
       <li class="layout__features-item">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3944 12.0001L10 7.7371V16.263L16.3944 12.0001ZM19.376 12.4161L8.77735 19.4818C8.54759 19.635 8.23715 19.5729 8.08397 19.3432C8.02922 19.261 8 19.1645 8 19.0658V4.93433C8 4.65818 8.22386 4.43433 8.5 4.43433C8.59871 4.43433 8.69522 4.46355 8.77735 4.5183L19.376 11.584C19.6057 11.7372 19.6678 12.0477 19.5146 12.2774C19.478 12.3323 19.4309 12.3795 19.376 12.4161Z"></path></svg>
-        Autoplay (5s)
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3873 13.4975L17.9403 20.5117L13.2418 22.2218L10.6889 15.2076L6.79004 17.6529L8.4086 1.63318L19.9457 12.8646L15.3873 13.4975ZM15.3768 19.3163L12.6618 11.8568L15.6212 11.4459L9.98201 5.9561L9.19088 13.7863L11.7221 12.1988L14.4371 19.6583L15.3768 19.3163Z"></path></svg>
+        Click to Navigate
       </li>
 
       <li class="layout__features-item">
@@ -101,16 +116,19 @@
     </ul>
   </section>
 
-  <script src="/dist/merrygo.js"></script>
+  <script src="../../js/merrygo.js"></script>
   <script>
+    const thumbInputs = Array.from(
+      document.querySelectorAll('.carousel__thumbnails input[type="radio"]')
+    );
+
     const carousel = new MerryGo({
       gallery: document.querySelector('.carousel__gallery'),
       galleryInner: document.querySelector('.carousel__inner'),
+      thumbs: thumbInputs,
       prevBtn: document.querySelector('.carousel__arrow--prev'),
       nextBtn: document.querySelector('.carousel__arrow--next'),
-      pagination: document.querySelector('.carousel__pagination'),
       gap: 20,
-      autoplay: 5000,
       infinityLoop: true
     });
 

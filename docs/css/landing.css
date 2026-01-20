@@ -318,6 +318,7 @@
   top: 0;
   right: 16px;
   left: 100%;
+  z-index: 99;
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
