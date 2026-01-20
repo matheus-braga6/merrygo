@@ -7,7 +7,7 @@
 
 Spin your content with joy. Infinite loops, touch support, and zero dependencies.
 
-[**View Demo**](https://matheus-braga6.github.io/merrygo/) | [**Documentation**](https://matheus-braga6.github.io/merrygo/)
+[**View Demos**](https://matheus-braga6.github.io/merrygo/) | [**Documentation**](https://matheus-braga6.github.io/merrygo/documentation.html)
 
 ---
 
