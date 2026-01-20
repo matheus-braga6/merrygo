@@ -730,5 +730,12 @@ class MerryGo {
     }
 }
 
-window.MerryGo = MerryGo;
+if (typeof window !== 'undefined') {
+  window.MerryGo = MerryGo;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = MerryGo;
+}
+
 export default MerryGo;
