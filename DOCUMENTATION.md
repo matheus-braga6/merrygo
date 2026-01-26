@@ -35,7 +35,7 @@
 
 ### Via CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.6/dist/merrygo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.7/dist/merrygo.js"></script>
 ```
 
 ### Via NPM
