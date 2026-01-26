@@ -207,9 +207,13 @@ class MerryGo {
         });
 
         if (currentTranslate <= this.innerMinTranslate || currentTranslate >= this.innerMaxTranslate) {
-            const mod = ((0 % this.totalImages) + this.totalImages) % this.totalImages;
-            this.currentIndex = mod;
-            this.updateGallery(this.currentIndex, true);
+            if (this.infinityLoop) {
+                const mod = ((0 % this.totalImages) + this.totalImages) % this.totalImages;
+                this.currentIndex = mod;
+                this.updateGallery(this.currentIndex, true);
+            } else {
+                this.updateGallery(this.currentIndex, true);
+            }
         } else {
             const swipeTime = Date.now() - this.startTime;
             const minSwipeDistance = 30;
@@ -223,6 +227,11 @@ class MerryGo {
                     targetIndex = this.currentIndex - movedSlides;
                 } else {
                     targetIndex = this.currentIndex + movedSlides;
+                }
+
+                if (!this.infinityLoop) {
+                    const maxIndex = this.totalImages - this.slidesVisible;
+                    targetIndex = Math.max(0, Math.min(targetIndex, maxIndex));
                 }
             } else {
                 targetIndex = this.currentIndex;
@@ -638,12 +647,20 @@ class MerryGo {
 
     setupResizeObserver() {
         let resizeTimer;
+        let lastWidth = window.innerWidth;
 
         this.handleResize = () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                this.applyBreakpoints();
-                this.refresh();
+                const currentWidth = window.innerWidth;
+                const widthDiff = Math.abs(currentWidth - lastWidth);
+
+                if (widthDiff > 50) {
+                    lastWidth = currentWidth;
+
+                    this.applyBreakpoints();
+                    this.refresh();
+                }
             }, 250);
         };
 
@@ -652,7 +669,13 @@ class MerryGo {
 
     init() {
         this.isTransitioning = false;
-        this.currentIndex = 0;
+        
+        const indexToUse = (this.currentIndex !== undefined && this.currentIndex !== null)
+            ? this.currentIndex
+            : 0;
+
+        this.currentIndex = indexToUse;
+
         this.removeClones();
 
         if (this.totalImages <= 1 || this.totalImages <= this.slidesVisible) {
@@ -664,7 +687,7 @@ class MerryGo {
         }
 
         if (this.thumbs && this.thumbs.length > 0) {
-            this.thumbs[0].checked = true;
+            this.thumbs[indexToUse].checked = true;
         }
 
         if (this.pagination) {
@@ -674,7 +697,7 @@ class MerryGo {
         this.calculateDimensions();
 
         setTimeout(() => {
-            this.updateGallery(0, true);
+            this.updateGallery(indexToUse, true);
             this.startAutoplay();
         }, 10);
     }
