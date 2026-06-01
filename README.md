@@ -3,7 +3,7 @@
 > A lightweight, performant JavaScript carousel library
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://img.shields.io/npm/v/merrygo.svg)](https://www.npmjs.com/package/merrygo-carousel)
+[![npm version](https://img.shields.io/npm/v/merrygo-carousel.svg)](https://www.npmjs.com/package/merrygo-carousel)
 
 Spin your content with joy. Infinite loops, touch support, and zero dependencies.
 
