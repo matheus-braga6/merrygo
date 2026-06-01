@@ -132,6 +132,7 @@ window.activeCarousels.push(carousel);
 | `slidesToScroll` | Number | `1` | Number of slides to scroll |
 | `infinityLoop` | Boolean | `true` | Enable infinite loop |
 | `autoplay` | Number/Boolean | `false` | Autoplay interval (ms) |
+| `disableOnInteraction` | Boolean | `false` | Pause autoplay when mouse hovers over the carousel |
 | `enableDrag` | Boolean | `true` | Enable drag/swipe |
 | `orientation` | String | `'horizontal'` | `'horizontal'` or `'vertical'` |
 | `breakpoints` | Object | `null` | Responsive configuration |

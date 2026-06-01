@@ -14,6 +14,7 @@ class MerryGo {
         this.slidesVisible = options.slidesVisible || 1;
         this.autoplay = options.autoplay ?? false;
         this.autoplayTimer = null;
+        this.disableOnInteraction = options.disableOnInteraction ?? false;
         this.breakpoints = options.breakpoints || null;
 
         this.cachedDimensions = {
@@ -45,6 +46,7 @@ class MerryGo {
         this.slideSize = 0;
         this.maxTranslate = 0;
         this.minTranslate = 0;
+        this.isHovered = false;
 
         this.options = options;
 
@@ -521,9 +523,20 @@ class MerryGo {
 
     restartAutoplay() {
         if (!this.autoplay || typeof this.autoplay !== 'number') return;
+        if (this.isHovered) return;
 
         this.stopAutoplay();
         this.startAutoplay();
+    }
+
+    handleHoverEnter = () => {
+        this.isHovered = true;
+        this.stopAutoplay();
+    }
+
+    handleHoverLeave = () => {
+        this.isHovered = false;
+        this.restartAutoplay();
     }
 
     createPagination() {
@@ -643,6 +656,11 @@ class MerryGo {
 
             this.galleryInner.style.cursor = 'grab';
         }
+
+        if (this.autoplay && this.disableOnInteraction) {
+            this.gallery.addEventListener('mouseenter', this.handleHoverEnter);
+            this.gallery.addEventListener('mouseleave', this.handleHoverLeave);
+        }
     }
 
     setupResizeObserver() {
@@ -733,6 +751,11 @@ class MerryGo {
 
         if (this.handleResize) {
             window.removeEventListener('resize', this.handleResize);
+        }
+
+        if (this.autoplay && this.disableOnInteraction) {
+            this.gallery.removeEventListener('mouseenter', this.handleHoverEnter);
+            this.gallery.removeEventListener('mouseleave', this.handleHoverLeave);
         }
 
         this.stopAutoplay();
