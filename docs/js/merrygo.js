@@ -47,6 +47,10 @@ class MerryGo {
         this.maxTranslate = 0;
         this.minTranslate = 0;
         this.isHovered = false;
+        this.touchLocked = false;
+        this.touchDirection = null;
+        this.touchStartX = 0;
+        this.touchStartY = 0;
 
         this.options = options;
 
@@ -134,6 +138,15 @@ class MerryGo {
         if (!this.enableDrag || this.isTransitioning) return;
 
         const isTouch = e.type === 'touchstart';
+
+        this.touchLocked = false;
+        this.touchDirection = null;
+
+        if (isTouch) {
+            this.touchStartX = e.touches[0].clientX;
+            this.touchStartY = e.touches[0].clientY;
+        }
+
         this.startPos = isTouch ? e.touches[0][this.orientation === 'horizontal' ? 'clientX' : 'clientY'] : e[this.orientation === 'horizontal' ? 'clientX' : 'clientY'];
         this.endPos = this.startPos;
         this.startTime = Date.now();
@@ -452,6 +465,26 @@ class MerryGo {
         if (!this.isDragging || this.isTransitioning) return;
 
         const isTouch = e.type === 'touchmove';
+
+        if (isTouch && !this.touchLocked) {
+            const dx = Math.abs(e.touches[0].clientX - this.touchStartX);
+            const dy = Math.abs(e.touches[0].clientY - this.touchStartY);
+
+            if (dx < 5 && dy < 5) return;
+
+            this.touchDirection = dx >= dy ? 'horizontal' : 'vertical';
+            this.touchLocked = true;
+        }
+
+        if (isTouch && this.touchDirection === 'vertical') {
+            this.isDragging = false;
+            return;
+        }
+
+        if (isTouch && this.touchDirection === 'horizontal') {
+            e.preventDefault();
+        }
+
         const currentPos = isTouch ? e.touches[0][this.orientation === 'horizontal' ? 'clientX' : 'clientY'] : e[this.orientation === 'horizontal' ? 'clientX' : 'clientY'];
 
         const previousPos = this.endPos;
@@ -643,7 +676,7 @@ class MerryGo {
 
         if (this.enableDrag) {
             this.gallery.addEventListener('touchstart', this.handleDragStart, { passive: true });
-            this.gallery.addEventListener('touchmove', this.handleDragMove, { passive: true });
+            this.gallery.addEventListener('touchmove', this.handleDragMove, { passive: false });
             this.gallery.addEventListener('touchend', this.handleDragEnd);
             this.gallery.addEventListener('touchcancel', this.handleDragEnd);
 
