@@ -53,26 +53,12 @@ body {
   filter: grayscale(0.3);
 }
 
+/* Structural rules are injected by MerryGo 2.0; gap and slide widths
+   follow the JS breakpoints through CSS custom properties. */
 .carousel__gallery {
   width: calc(100% - 150px);
   margin-inline: auto;
-  overflow: hidden;
-  user-select: none;
-  position: relative;
   z-index: 2;
-}
-
-.carousel__inner {
-  display: flex;
-  gap: 30px;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
-}
-
-.carousel__slide {
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: calc((100% - 90px) / 4);
 }
 
 /* Product Card */
@@ -232,14 +218,6 @@ body {
     width: calc(100% - 98px);
   }
 
-  .carousel__inner {
-    gap: 25px;
-  }
-
-  .carousel__slide {
-    width: calc((100% - 50px) / 3);
-  }
-
   .carousel__arrow {
     width: 34px;
     height: 34px;
@@ -251,16 +229,6 @@ body {
 
   .carousel__arrow--next {
     right: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel__inner {
-    gap: 20px;
-  }
-
-  .carousel__slide {
-    width: calc((100% - 20px) / 2);
   }
 }
 
@@ -301,12 +269,7 @@ body {
   }
 
   .carousel__inner {
-    gap: 10px;
     height: 80%;
-  }
-
-  .carousel__slide {
-    width: 100%; 
   }
 
   .pcard {

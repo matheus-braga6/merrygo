@@ -77,6 +77,13 @@ window.addEventListener('DOMContentLoaded', function() {
     nextBtn: document.querySelector('.demo-thumbnails .demo__arrow--next'),
     gap: 5,
   });
+
+  // AOS measures the elements on DOMContentLoaded, before this handler runs.
+  // MerryGo 2.0 injects its layout styles at runtime, which shrinks the page,
+  // so the trigger positions must be recalculated after the carousels exist.
+  if (typeof AOS !== 'undefined' && typeof AOS.refreshHard === 'function') {
+    AOS.refreshHard();
+  }
 });
 
 // Installation tabs functionality

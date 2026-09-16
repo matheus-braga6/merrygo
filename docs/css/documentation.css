@@ -159,6 +159,14 @@
   border-bottom-color: #667eea;
 }
 
+/* Inline links inside the text: same color as the text, fixed underline, no hover change */
+.docs-content .docs-content__inline-link,
+.docs-content .docs-content__inline-link:hover {
+  color: inherit;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
 .docs-content strong {
   font-weight: 600;
   color: var(--brown);

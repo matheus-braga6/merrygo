@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://img.shields.io/npm/v/merrygo-carousel.svg)](https://www.npmjs.com/package/merrygo-carousel)
 
-Spin your content with joy. Infinite loops, touch support, and zero dependencies.
+Spin your content with joy. Infinite loops, touch support and zero dependencies.
 
 [**View Demos**](https://matheus-braga6.github.io/merrygo/) | [**Documentation**](https://matheus-braga6.github.io/merrygo/documentation.html)
 
@@ -16,10 +16,10 @@ Spin your content with joy. Infinite loops, touch support, and zero dependencies
 - 🎡 **Infinite Loop** - Seamless continuous scrolling
 - 👆 **Touch & Drag** - Mobile-friendly swipe gestures
 - 📱 **Fully Responsive** - Breakpoint-based configuration
+- 🎨 **Zero CSS Setup** - Base styles are injected automatically; override anything with your own classes
 - ⚡ **Lightweight** - Less than 10KB gzipped
 - 🎯 **Zero Dependencies** - Pure vanilla JavaScript
-- 🎨 **Customizable** - Flexible styling and options
-- ♿ **Accessible** - ARIA labels and keyboard navigation
+- ♿ **Accessible** - ARIA attributes on arrows and pagination
 - 🔄 **Autoplay** - Optional automatic sliding
 
 ---
@@ -28,17 +28,29 @@ Spin your content with joy. Infinite loops, touch support, and zero dependencies
 
 ### CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.7/dist/merrygo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@2.0.0/dist/merrygo.js"></script>
 ```
 
 ### NPM
 ```bash
 npm install merrygo-carousel
 ```
+```javascript
+import MerryGo from 'merrygo-carousel';
+```
+
+## 🆕 What's new in 2.0
+
+- **Zero CSS setup**: gallery, track, slides, arrows and pagination receive `merrygo-*` classes and a base stylesheet injected once. Opt out with `injectStyles: false`.
+- **Fractional `slidesVisible`**: show 1.5, 2.5 or 3.2 slides to hint that there is more content, also inside `breakpoints`.
+
+Upgrading from 1.x? Read the [migration guide](./DOCUMENTATION.md#migrating-from-1x).
+
+---
 
 ## 📚 Documentation
 
-For complete documentation including all options, methods, breakpoints, and advanced examples:
+For complete documentation including all options, methods, breakpoints, styling and advanced examples:
 
 **[→ Read Full Documentation](./DOCUMENTATION.md)**
 
@@ -46,11 +58,9 @@ For complete documentation including all options, methods, breakpoints, and adva
 
 ## 🌐 Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- iOS Safari 10+
+- Chrome / Edge 80+
+- Firefox 75+
+- Safari 14.1+ (iOS 14.5+)
 - Android Chrome
 
 ---

@@ -19,7 +19,7 @@
         <h1 class="layout__header-title">MerryGo</h1>
       </a>
 
-      <a 
+      <a
         class="layout__header-btn"
         href="./index.html"
         aria-label="Back to home"
@@ -27,16 +27,16 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5812 2.68627C12.2335 2.43791 11.7664 2.43791 11.4187 2.68627L1.9187 9.47198L3.08118 11.0994L11.9999 4.7289L20.9187 11.0994L22.0812 9.47198L12.5812 2.68627ZM19.5812 12.6863L12.5812 7.68627C12.2335 7.43791 11.7664 7.43791 11.4187 7.68627L4.4187 12.6863C4.15591 12.874 3.99994 13.177 3.99994 13.5V20C3.99994 20.5523 4.44765 21 4.99994 21H18.9999C19.5522 21 19.9999 20.5523 19.9999 20V13.5C19.9999 13.177 19.844 12.874 19.5812 12.6863Z"></path></svg>
       </a>
 
-      <a 
-        class="layout__header-btn" 
-        href="https://github.com/matheus-braga6/merrygo" 
+      <a
+        class="layout__header-btn"
+        href="https://github.com/matheus-braga6/merrygo"
         target="_blank"
         aria-label="View on Github"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
       </a>
-      
-      <button 
+
+      <button
         type="button"
         class="layout__header-btn"
         aria-label="Share"
@@ -67,7 +67,7 @@
             <h3 class="docs-sidebar__section-title">Configuration</h3>
             <a href="#configuration-options" class="docs-sidebar__link">Configuration Options</a>
             <a href="#responsive-breakpoints" class="docs-sidebar__link">Responsive Breakpoints</a>
-            <a href="#css-styling" class="docs-sidebar__link">CSS Styling</a>
+            <a href="#styling" class="docs-sidebar__link">Styling</a>
           </div>
 
           <div class="docs-sidebar__section">
@@ -79,6 +79,11 @@
             <h3 class="docs-sidebar__section-title">Examples</h3>
             <a href="#practical-examples" class="docs-sidebar__link">Practical Examples</a>
             <a href="#best-practices" class="docs-sidebar__link">Best Practices</a>
+          </div>
+
+          <div class="docs-sidebar__section">
+            <h3 class="docs-sidebar__section-title">Upgrade</h3>
+            <a href="#migrating-from-1x" class="docs-sidebar__link">Migrating from 1.x</a>
           </div>
 
           <div class="docs-sidebar__section">
@@ -95,14 +100,14 @@
           <div class="docs-content__title">
             <h1>MerryGo - Complete Documentation</h1>
 
-            <img 
-              src="./assets/icons/circle.svg" 
-              alt="MerryGo Logo" 
+            <img
+              src="./assets/icons/circle.svg"
+              alt="MerryGo Logo"
               class="hero__logo"
             >
           </div>
 
-          <p><strong>MerryGo</strong> is a highly customizable JavaScript carousel that supports multiple slides, drag & swipe, autoplay, navigation arrows, pagination, and responsive breakpoints.</p>
+          <p><strong>MerryGo</strong> is a highly customizable JavaScript carousel that supports multiple slides, drag & swipe, autoplay, navigation arrows, pagination and responsive breakpoints.</p>
 
           <h3>Key Features</h3>
           <ul>
@@ -120,14 +125,17 @@
           <h2 id="installation">Installation</h2>
 
           <h3>Via CDN</h3>
-          <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@1.0.7/dist/merrygo.js"&gt;&lt;/script&gt;</code></pre>
+          <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@2.0.0/dist/merrygo.js"&gt;&lt;/script&gt;</code></pre>
 
           <h3>Via NPM</h3>
           <pre><code>npm install merrygo-carousel</code></pre>
-          <pre><code>import MerryGo from 'merrygo-carousel';</code></pre>
+          <pre><code>import MerryGo from 'merrygo-carousel';        // ES modules
+const MerryGo = require('merrygo-carousel');   // CommonJS</code></pre>
 
           <!-- HTML STRUCTURE -->
           <h2 id="html-structure">HTML Structure</h2>
+
+          <p>MerryGo needs two elements: the <strong>gallery</strong> (the viewport that clips the content) and the <strong>inner</strong> (the track). Every direct child of the inner is a slide.</p>
 
           <h3>Minimum Structure</h3>
           <pre><code>
@@ -139,25 +147,24 @@
     &lt;/div&gt;
   &lt;/div&gt;</code></pre>
 
-          <h3>Complete Structure (with navigation and pagination)</h3>
+          <h3>Recommended Structure (with navigation and pagination)</h3>
           <pre><code>
-  &lt;div class="carousel-container"&gt;
-    &lt;!-- Gallery --&gt;
-    &lt;div class="carousel"&gt;
-      &lt;div class="carousel__inner"&gt;
-        &lt;div class="carousel__slide"&gt;Slide 1&lt;/div&gt;
-        &lt;div class="carousel__slide"&gt;Slide 2&lt;/div&gt;
-        &lt;div class="carousel__slide"&gt;Slide 3&lt;/div&gt;
-      &lt;/div&gt;
+  &lt;div class="carousel"&gt;
+    &lt;div class="carousel__inner"&gt;
+      &lt;div class="carousel__slide"&gt;Slide 1&lt;/div&gt;
+      &lt;div class="carousel__slide"&gt;Slide 2&lt;/div&gt;
+      &lt;div class="carousel__slide"&gt;Slide 3&lt;/div&gt;
     &lt;/div&gt;
-    
-    &lt;!-- Navigation arrows --&gt;
-    &lt;button class="carousel__arrow carousel__arrow--prev"&gt;←&lt;/button&gt;
-    &lt;button class="carousel__arrow carousel__arrow--next"&gt;→&lt;/button&gt;
-    
-    &lt;!-- Pagination --&gt;
-    &lt;div class="carousel__pagination"&gt;&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+
+    &lt;button class="carousel__arrow--prev" type="button" aria-label="Previous"&gt;‹&lt;/button&gt;
+    &lt;button class="carousel__arrow--next" type="button" aria-label="Next"&gt;›&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="carousel__pagination"&gt;&lt;/div&gt;</code></pre>
+
+          <p>Class names are yours to choose: MerryGo finds the elements through the options and adds its own <code>merrygo-*</code> classes on top (see <a href="#styling" class="docs-content__inline-link">Styling</a>).</p>
+
+          <p><strong>Where can the arrows go?</strong> Anywhere. They are absolutely positioned, so they anchor to their nearest positioned ancestor. Inside the gallery, that is the gallery itself. If you place them in another wrapper that is <code>position: static</code>, MerryGo adds the class <code>merrygo-wrapper</code> (<code>position: relative</code>) to that wrapper.</p>
 
           <!-- INITIALIZATION -->
           <h2 id="initialization">Initialization</h2>
@@ -182,8 +189,10 @@
     slidesToScroll: 1,
     infinityLoop: true,
     autoplay: 5000,
+    disableOnInteraction: true,
     enableDrag: true,
-    orientation: 'horizontal'
+    orientation: 'horizontal',
+    injectStyles: true
   });
 
   // ⚠️ IMPORTANT: Save reference for destruction in PWA/SPA
@@ -207,91 +216,97 @@
                 <td><code>gallery</code></td>
                 <td>Element</td>
                 <td><strong>required</strong></td>
-                <td>Main carousel container</td>
+                <td>Viewport that clips the slides. Receives <code>merrygo-gallery</code>.</td>
               </tr>
               <tr>
                 <td><code>galleryInner</code></td>
                 <td>Element</td>
                 <td><strong>required</strong></td>
-                <td>Slides container</td>
+                <td>Track whose direct children are the slides. Receives <code>merrygo-inner</code>.</td>
               </tr>
               <tr>
                 <td><code>prevBtn</code></td>
                 <td>Element</td>
                 <td><code>null</code></td>
-                <td>Previous button</td>
+                <td>Previous button. Receives <code>merrygo-arrow merrygo-arrow--left</code>.</td>
               </tr>
               <tr>
                 <td><code>nextBtn</code></td>
                 <td>Element</td>
                 <td><code>null</code></td>
-                <td>Next button</td>
+                <td>Next button. Receives <code>merrygo-arrow merrygo-arrow--right</code>.</td>
               </tr>
               <tr>
                 <td><code>pagination</code></td>
                 <td>Element</td>
                 <td><code>null</code></td>
-                <td>Pagination container</td>
+                <td>Container for the bullets. Receives <code>merrygo-pagination</code>.</td>
               </tr>
               <tr>
                 <td><code>thumbs</code></td>
                 <td>Array</td>
                 <td><code>[]</code></td>
-                <td>Array of radio inputs for thumbnails</td>
+                <td>Radio inputs kept in sync with the slides.</td>
               </tr>
               <tr>
                 <td><code>gap</code></td>
                 <td>Number</td>
                 <td><code>0</code></td>
-                <td>Space between slides (px)</td>
+                <td>Space between slides in px. Applied by the injected CSS through <code>--merrygo-gap</code>.</td>
               </tr>
               <tr>
                 <td><code>slidesVisible</code></td>
                 <td>Number</td>
                 <td><code>1</code></td>
-                <td>Number of visible slides</td>
+                <td>Slides visible at once.</td>
               </tr>
               <tr>
                 <td><code>slidesToScroll</code></td>
                 <td>Number</td>
                 <td><code>1</code></td>
-                <td>Number of slides to scroll</td>
+                <td>Slides moved by the arrows and by autoplay (integer ≥ 1).</td>
               </tr>
               <tr>
                 <td><code>infinityLoop</code></td>
                 <td>Boolean</td>
                 <td><code>true</code></td>
-                <td>Enable infinite loop</td>
+                <td>Infinite loop with cloned slides. Turned off automatically when there are not more slides than <code>slidesVisible</code>.</td>
               </tr>
               <tr>
                 <td><code>autoplay</code></td>
                 <td>Number/Boolean</td>
                 <td><code>false</code></td>
-                <td>Autoplay interval (ms)</td>
+                <td>Autoplay interval in ms.</td>
               </tr>
               <tr>
                 <td><code>disableOnInteraction</code></td>
                 <td>Boolean</td>
                 <td><code>false</code></td>
-                <td>Pause autoplay on mouse hover, resume on mouse leave</td>
+                <td>Pause autoplay while the mouse is over the carousel.</td>
               </tr>
               <tr>
                 <td><code>enableDrag</code></td>
                 <td>Boolean</td>
                 <td><code>true</code></td>
-                <td>Enable drag/swipe</td>
+                <td>Mouse drag and touch swipe.</td>
               </tr>
               <tr>
                 <td><code>orientation</code></td>
                 <td>String</td>
                 <td><code>'horizontal'</code></td>
-                <td><code>'horizontal'</code> or <code>'vertical'</code></td>
+                <td><code>'horizontal'</code> or <code>'vertical'</code>.</td>
               </tr>
               <tr>
                 <td><code>breakpoints</code></td>
                 <td>Object</td>
                 <td><code>null</code></td>
-                <td>Responsive configuration</td>
+                <td>Responsive configuration (see below).</td>
+              </tr>
+              <tr>
+                <td><code>injectStyles</code></td>
+                <td>Boolean</td>
+                <td><code>true</code></td>
+                <td>Inject the base stylesheet. Set to <code>false</code> to write all the CSS yourself.</td>
               </tr>
             </tbody>
           </table>
@@ -299,7 +314,7 @@
           <!-- RESPONSIVE BREAKPOINTS -->
           <h2 id="responsive-breakpoints">Responsive Breakpoints</h2>
 
-          <p>Breakpoints allow you to adjust carousel behavior at different screen sizes.</p>
+          <p>Breakpoints adjust the carousel at different screen widths. Because slide widths come from CSS custom properties, <strong>you do not need matching media queries in your CSS</strong>.</p>
 
           <h3>Structure</h3>
           <pre><code>
@@ -318,228 +333,290 @@
   const carousel = new MerryGo({
     gallery: document.querySelector('.carousel'),
     galleryInner: document.querySelector('.carousel__inner'),
+    gap: 16,
     breakpoints: {
-      0: { 
-        slidesVisible: 1, 
-        gap: 0,
-        infinityLoop: true 
-      },
-      561: { 
-        slidesVisible: 2, 
-        gap: 15 
-      },
-      769: { 
-        slidesVisible: 3, 
-        gap: 15 
-      },
-      1025: { 
-        slidesVisible: 4, 
-        gap: 30,
-        infinityLoop: true 
-      }
+      0: { slidesVisible: 1.5, gap: 12 },
+      561: { slidesVisible: 2.5, gap: 16 },
+      769: { slidesVisible: 3, gap: 16 },
+      1025: { slidesVisible: 4, gap: 24, infinityLoop: false }
     }
   });</code></pre>
 
           <p><strong>How it works:</strong></p>
           <ul>
-            <li>- The carousel applies the configuration from the closest breakpoint ≤ current width</li>
-            <li>- Example: at 800px width, applies settings from <code>769</code></li>
-            <li>- At 400px, applies settings from <code>0</code></li>
+            <li>- The carousel applies the configuration of the closest breakpoint ≤ current width (at 800px, <code>769</code>; at 400px, <code>0</code>)</li>
+            <li>- Every time the active breakpoint changes, the options go back to the constructor values and the breakpoint values are applied on top. <code>infinityLoop: false</code> in <code>1025</code> does not leak into <code>769</code></li>
+            <li>- Breakpoints are re-evaluated on window resize (width changes bigger than 50px)</li>
           </ul>
 
-          <!-- CSS STYLING -->
-          <h2 id="css-styling">CSS Styling</h2>
+          <!-- STYLING -->
+          <h2 id="styling">Styling</h2>
 
-          <h3>Required Base CSS</h3>
-          <pre><code>
-  /* Main container */
-  .carousel {
-    width: 100%;
-    overflow: hidden;
-    user-select: none;
-  }
+          <h3>What MerryGo injects</h3>
+          <p>On the first instance, MerryGo adds a <code>&lt;style id="merrygo-styles"&gt;</code> tag as the <strong>first node of <code>&lt;head&gt;</code></strong> and gives your elements these classes:</p>
 
-  /* Slides container */
-  .carousel__inner {
-    display: flex;
-    gap: 30px; /* Must match JavaScript gap */
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
-  }
-
-  /* Individual slides */
-  .carousel__slide {
-    flex-shrink: 0;
-    box-sizing: border-box;
-    /* Width is calculated dynamically by JS */
-  }</code></pre>
-
-          <h3>Slide Width Calculation</h3>
-
-          <p><strong>Why calculate width?</strong></p>
-          <p>The carousel uses <code>display: flex</code> and controls slide position via <code>transform</code>. For this to work, each slide needs a fixed width defined in CSS. This width must account for how many slides are visible at once and the gap between them.</p>
-
-          <p><strong>The Formula:</strong></p>
-          <pre><code>slide width = (100% - (gap × (slidesVisible - 1))) / slidesVisible</code></pre>
-
-          <p><strong>Practical example:</strong> For <strong>4 visible slides</strong> with <strong>30px gap</strong>:</p>
-          <ul>
-            <li>Total gaps = 30px × (4 - 1) = 90px</li>
-            <li>Available space for slides = 100% - 90px</li>
-            <li>Width of each slide = (100% - 90px) / 4</li>
-          </ul>
-
-          <pre><code>.carousel__slide {
-    width: calc((100% - 90px) / 4);
-  }</code></pre>
-
-          <h3>Calculation Examples</h3>
           <table>
             <thead>
               <tr>
-                <th>Visible Slides</th>
-                <th>Gap</th>
-                <th>CSS Formula</th>
+                <th>Element</th>
+                <th>Class</th>
+                <th>Purpose</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>0px</td>
-                <td><code>width: 100%</code></td>
+                <td>gallery</td>
+                <td><code>merrygo-gallery</code> (+ <code>merrygo-gallery--vertical</code>)</td>
+                <td><code>position: relative</code>, <code>overflow: hidden</code>, <code>user-select: none</code></td>
               </tr>
               <tr>
-                <td>2</td>
-                <td>15px</td>
-                <td><code>width: calc((100% - 15px) / 2)</code></td>
+                <td>inner</td>
+                <td><code>merrygo-inner</code></td>
+                <td>flex track, <code>gap</code> from <code>--merrygo-gap</code>, transition</td>
               </tr>
               <tr>
-                <td>3</td>
-                <td>15px</td>
-                <td><code>width: calc((100% - 30px) / 3)</code></td>
+                <td>slides (and clones)</td>
+                <td><code>merrygo-slide</code></td>
+                <td><code>flex-shrink: 0</code>, width (or height) from the custom properties</td>
               </tr>
               <tr>
-                <td>4</td>
-                <td>30px</td>
-                <td><code>width: calc((100% - 90px) / 4)</code></td>
+                <td>prevBtn / nextBtn</td>
+                <td><code>merrygo-arrow</code> + <code>merrygo-arrow--left</code> / <code>merrygo-arrow--right</code> (+ <code>merrygo-arrow--disabled</code>)</td>
+                <td>round white button, absolutely positioned at the edges</td>
               </tr>
               <tr>
-                <td>6</td>
-                <td>16px</td>
-                <td><code>width: calc((100% - 80px) / 6)</code></td>
+                <td>arrows' parent (only if it is <code>position: static</code>)</td>
+                <td><code>merrygo-wrapper</code></td>
+                <td><code>position: relative</code></td>
+              </tr>
+              <tr>
+                <td>pagination</td>
+                <td><code>merrygo-pagination</code></td>
+                <td>centered flex row</td>
+              </tr>
+              <tr>
+                <td>bullets (created by MerryGo)</td>
+                <td><code>merrygo-bullet</code>, <code>merrygo-bullet-active</code></td>
+                <td>small round buttons</td>
+              </tr>
+              <tr>
+                <td>thumbs (radio inputs)</td>
+                <td><code>merrygo-thumb-input</code></td>
+                <td>visually hidden, still keyboard accessible</td>
+              </tr>
+              <tr>
+                <td>thumb labels (found through <code>for</code> or as the input's parent)</td>
+                <td><code>merrygo-thumb</code>, <code>merrygo-thumb--active</code></td>
+                <td>80px block with a 3px border, black when active</td>
+              </tr>
+              <tr>
+                <td>image inside a thumb label</td>
+                <td><code>merrygo-thumb-img</code></td>
+                <td><code>display: block</code>, full width of the label</td>
               </tr>
             </tbody>
           </table>
 
-          <h3>Complete Example with Navigation</h3>
+          <p>Because the stylesheet comes first in the cascade and uses single-class selectors without <code>!important</code>, <strong>any rule you write with the same or higher specificity wins</strong>. You never need to fight the defaults.</p>
 
+          <h3>CSS custom properties</h3>
+          <p>MerryGo writes these properties on the gallery element and the injected CSS uses them to size the slides. They are updated on init, on <code>refresh()</code> and when a breakpoint changes.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--merrygo-gap</code></td>
+                <td><code>gap</code> in px, e.g. <code>16px</code></td>
+              </tr>
+              <tr>
+                <td><code>--merrygo-slides-visible</code></td>
+                <td><code>slidesVisible</code>, e.g. <code>1.5</code></td>
+              </tr>
+              <tr>
+                <td><code>--merrygo-gaps-visible</code></td>
+                <td><code>ceil(slidesVisible) - 1</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>You can use them in your own CSS, for example <code>padding-inline: var(--merrygo-gap)</code>.</p>
+
+          <h3>Customizing arrows</h3>
+          <p>Give the buttons your own classes and override what you need. The defaults are 44px round white buttons at <code>left: 16px</code> / <code>right: 16px</code>, vertically centered.</p>
           <pre><code>
-.carousel-container {
-  position: relative;
-  padding: 40px 0;
+.carousel__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: 0;
 }
 
-.carousel {
+.carousel__arrow--prev { left: 8px; }
+.carousel__arrow--next { right: 8px; }
+
+/* Disabled state (only when infinityLoop is false) */
+.carousel__arrow.merrygo-arrow--disabled { opacity: 0.3; }</code></pre>
+          <p>Arrows keep the inline <code>opacity: 0.5; pointer-events: none</code> of 1.x when disabled, plus the <code>merrygo-arrow--disabled</code> class and <code>aria-disabled="true"</code>.</p>
+
+          <h3>Customizing pagination</h3>
+          <pre><code>
+.carousel__pagination {
+  justify-content: flex-start;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.carousel__pagination .merrygo-bullet {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ddd;
+}
+
+.carousel__pagination .merrygo-bullet-active {
+  background: #000000;
+}</code></pre>
+
+          <h3>Customizing thumbnails</h3>
+          <p>The radio inputs passed in <code>thumbs</code> are hidden, their labels get a default look (80px wide, 3px border, black when active) and the image inside each label fills its width. Override what you need:</p>
+          <pre><code>
+.product-gallery__thumbnail {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.product-gallery__thumbnail.merrygo-thumb--active {
+  border-color: #000000;
+}</code></pre>
+
+          <h3>Vertical orientation</h3>
+          <p>With <code>orientation: 'vertical'</code> the gallery receives <code>merrygo-gallery--vertical</code>, the track becomes a column and the slides get a height instead of a width. <strong>The gallery needs a height</strong> defined by you:</p>
+          <pre><code>.carousel { height: 400px; }</code></pre>
+
+          <h3>Disabling style injection</h3>
+          <pre><code>new MerryGo({ ..., injectStyles: false });</code></pre>
+          <p>The <code>merrygo-*</code> classes are still added, but no stylesheet is injected. Use the reference below (or your 1.x CSS) to provide the structure yourself: <code>overflow: hidden</code> on the gallery, <code>display: flex; gap</code> on the inner and <code>flex-shrink: 0</code> plus a width on the slides.</p>
+
+          <h3>The injected CSS (reference)</h3>
+          <pre><code>
+.merrygo-gallery {
+  position: relative;
   width: 100%;
   overflow: hidden;
+  -webkit-user-select: none;
   user-select: none;
 }
-
-.carousel__inner {
+.merrygo-inner {
   display: flex;
-  gap: 30px;
+  flex-direction: row;
+  gap: var(--merrygo-gap, 0px);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
 }
-
-.carousel__slide {
+.merrygo-slide {
   flex-shrink: 0;
-  width: calc((100% - 90px) / 4);
   box-sizing: border-box;
+  width: calc((100% - var(--merrygo-gap, 0px) * var(--merrygo-gaps-visible, 0)) / var(--merrygo-slides-visible, 1));
 }
-
-/* Navigation arrows */
-.carousel__arrow {
-  width: 50px;
-  height: 50px;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+.merrygo-gallery--vertical .merrygo-inner {
+  flex-direction: column;
+  height: 100%;
+}
+.merrygo-gallery--vertical .merrygo-slide {
+  width: 100%;
+  height: calc((100% - var(--merrygo-gap, 0px) * var(--merrygo-gaps-visible, 0)) / var(--merrygo-slides-visible, 1));
+}
+.merrygo-wrapper {
+  position: relative;
+}
+.merrygo-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
   cursor: pointer;
-  z-index: 10;
+  transform: translateY(-50%);
   transition: opacity 0.3s ease;
 }
-
-.carousel__arrow--prev {
-  left: -56px;
-}
-
-.carousel__arrow--next {
-  right: -56px;
-}
-
-.carousel__arrow:hover {
-  background-color: #f5f5f5;
-}
-
-/* Pagination */
-.carousel__pagination {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 24px;
-}
-
-.merrygo-bullet {
+.merrygo-arrow svg {
   width: 16px;
   height: 16px;
-  border: 1px solid #e0e0e0;
+}
+.merrygo-arrow--left {
+  left: 16px;
+}
+.merrygo-arrow--right {
+  right: 16px;
+}
+.merrygo-arrow--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.merrygo-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.merrygo-bullet {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
-  background-color: #fff;
+  background: #ced1d3;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-
 .merrygo-bullet-active {
-  background-color: #007bff;
-  border-color: #007bff;
+  background: #000;
 }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .carousel__inner {
-    gap: 15px;
-  }
-  
-  .carousel__slide {
-    width: calc((100% - 30px) / 3);
-  }
-  
-  .carousel__arrow {
-    display: none;
-  }
+.merrygo-thumb-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
-
-@media (max-width: 768px) {
-  .carousel__slide {
-    width: calc((100% - 15px) / 2);
-  }
+.merrygo-thumb {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 80px;
+  border: 3px solid transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 }
-
-@media (max-width: 560px) {
-  .carousel__inner {
-    gap: 0;
-  }
-  
-  .carousel__slide {
-    width: 100%;
-  }
+.merrygo-thumb-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.merrygo-thumb--active {
+  border-color: #000;
 }
           </code></pre>
 
@@ -547,29 +624,34 @@
           <h2 id="public-methods">Public Methods</h2>
 
           <h3><code>goToSlide(index)</code></h3>
-          <p>Navigate to a specific slide.</p>
-          <pre><code>carousel.goToSlide(2); // Go to the third slide (index 2)</code></pre>
+          <p>Navigate to a specific slide (0-based). Without loop the index is limited to the valid range.</p>
+          <pre><code>carousel.goToSlide(2); // Go to the third slide</code></pre>
 
-          <h3><code>nextSlide()</code></h3>
+          <h3><code>nextSlide()</code> / <code>prevSlide()</code></h3>
           <p>Advance to the next slide.</p>
-          <pre><code>carousel.nextSlide();</code></pre>
+          <pre><code>carousel.nextSlide();
+carousel.prevSlide();</code></pre>
 
-          <h3><code>prevSlide()</code></h3>
-          <p>Go back to the previous slide.</p>
-          <pre><code>carousel.prevSlide();</code></pre>
+          <h3><code>goToPage(page)</code></h3>
+          <p>Navigate to a pagination page (0-based).</p>
+          <pre><code>carousel.goToPage(1);</code></pre>
 
           <h3><code>refresh()</code></h3>
-          <p>Reinitialize the carousel (useful after DOM changes).</p>
+          <p>Reinitialize the carousel. It re-reads the slides from the DOM, so call it after adding or removing slides.</p>
           <pre><code>carousel.refresh();</code></pre>
 
           <h3><code>destroy()</code></h3>
-          <p>Remove all event listeners and clean up the carousel.</p>
+          <p>Remove all event listeners, clones and timers. The <code>merrygo-*</code> classes stay on the elements so the layout does not collapse.</p>
           <pre><code>carousel.destroy();</code></pre>
 
           <h3><code>startAutoplay()</code> / <code>stopAutoplay()</code></h3>
-          <p>Manually control autoplay.</p>
+          <p>Manually control autoplay (requires the <code>autoplay</code> option).</p>
           <pre><code>carousel.startAutoplay();
-  carousel.stopAutoplay();</code></pre>
+carousel.stopAutoplay();</code></pre>
+
+          <h3>Static members</h3>
+          <pre><code>MerryGo.version;        // '2.0.0'
+MerryGo.injectStyles(); // Inject the base stylesheet manually (idempotent)</code></pre>
 
           <!-- PRACTICAL EXAMPLES -->
           <h2 id="practical-examples">Practical Examples</h2>
@@ -578,17 +660,13 @@
           <pre><code>
   &lt;div class="main-banner"&gt;
     &lt;div class="main-banner__inner"&gt;
-      &lt;div class="main-banner__slide"&gt;
-        &lt;img src="banner1.jpg" alt="Banner 1"&gt;
-      &lt;/div&gt;
-      &lt;div class="main-banner__slide"&gt;
-        &lt;img src="banner2.jpg" alt="Banner 2"&gt;
-      &lt;/div&gt;
+      &lt;div class="main-banner__slide"&gt;&lt;img src="banner1.jpg" alt="Banner 1"&gt;&lt;/div&gt;
+      &lt;div class="main-banner__slide"&gt;&lt;img src="banner2.jpg" alt="Banner 2"&gt;&lt;/div&gt;
+      &lt;div class="main-banner__slide"&gt;&lt;img src="banner3.jpg" alt="Banner 3"&gt;&lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;button class="main-banner__prev"&gt;←&lt;/button&gt;
-  &lt;button class="main-banner__next"&gt;→&lt;/button&gt;</code></pre>
+    &lt;button class="main-banner__prev" type="button" aria-label="Previous"&gt;‹&lt;/button&gt;
+    &lt;button class="main-banner__next" type="button" aria-label="Next"&gt;›&lt;/button&gt;
+  &lt;/div&gt;</code></pre>
 
           <pre><code>
   const bannerCarousel = new MerryGo({
@@ -598,236 +676,138 @@
     nextBtn: document.querySelector('.main-banner__next'),
     gap: 0,
     autoplay: 7000,
+    disableOnInteraction: true,
     infinityLoop: true
-  });</code></pre>
+  });
 
-  <pre><code>
-.main-banner {
-  width: 100%;
-  overflow: hidden;
-}
+  window.activeCarousels = window.activeCarousels || [];
+  window.activeCarousels.push(bannerCarousel);</code></pre>
 
-.main-banner__inner {
-  display: flex;
-  gap: 0;
-  transition: transform 0.4s ease;
-}
-
-.main-banner__slide {
-  flex-shrink: 0;
-  width: 100%;
-}
-
+          <pre><code>
+/* Only the content needs CSS */
 .main-banner__slide img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.main-banner__arrow {
-    background-color: #fff;
-    width: 44px;
-    height: 44px;
-    border-radius: 800px;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0px 1px 8px 0px #0000001F;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.main-banner__arrow svg {
-    width: 16px;
-    height: 16px;
-}
-
-.main-banner__arrow--prev {
-    left: 15px;
-} 
-
-.main-banner__arrow--next {
-    right: 15px;
-}
-  </code></pre>
-
-          <h3>2. Product Gallery (4 visible)</h3>
-          <pre><code>
-  const productsCarousel = new MerryGo({
-    gallery: document.querySelector('.products-carousel'),
-    galleryInner: document.querySelector('.products-carousel__inner'),
-    prevBtn: document.querySelector('.products-carousel__prev'),
-    nextBtn: document.querySelector('.products-carousel__next'),
-    pagination: document.querySelector('.products-carousel__pagination'),
-    gap: 20,
-    slidesVisible: 4,
-    infinityLoop: false,
-    breakpoints: {
-      0: { slidesVisible: 1, gap: 0 },
-      561: { slidesVisible: 2, gap: 15 },
-      769: { slidesVisible: 3, gap: 15 },
-      1025: { slidesVisible: 4, gap: 20 }
-    }
-  });</code></pre>
-
-          <pre><code>
-const productsCarousel = new MerryGo({
-  gallery: document.querySelector('.products-carousel'),
-  galleryInner: document.querySelector('.products-carousel__inner'),
-  prevBtn: document.querySelector('.products-carousel__prev'),
-  nextBtn: document.querySelector('.products-carousel__next'),
-  pagination: document.querySelector('.products-carousel__pagination'),
-  gap: 20,
-  slidesVisible: 4,
-  slidesToScroll: 4,
-  infinityLoop: false,
-  breakpoints: {
-    0: { slidesVisible: 1, gap: 0 },
-    561: { slidesVisible: 2, gap: 15 },
-    769: { slidesVisible: 3, gap: 15 },
-    1025: { slidesVisible: 4, gap: 20 }
-  }
-});
-
-window.activeCarousels = window.activeCarousels || [];
-window.activeCarousels.push(productsCarousel);
           </code></pre>
 
+          <h3>2. Product Gallery (fractional on mobile, 4 visible on desktop)</h3>
           <pre><code>
-.products-carousel {
+  &lt;div class="products"&gt;
+    &lt;div class="products__inner"&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 1&lt;/article&gt;&lt;/div&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 2&lt;/article&gt;&lt;/div&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 3&lt;/article&gt;&lt;/div&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 4&lt;/article&gt;&lt;/div&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 5&lt;/article&gt;&lt;/div&gt;
+      &lt;div class="products__slide"&gt;&lt;article class="product-card"&gt;Product 6&lt;/article&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="products__arrow products__arrow--prev" type="button" aria-label="Previous"&gt;‹&lt;/button&gt;
+    &lt;button class="products__arrow products__arrow--next" type="button" aria-label="Next"&gt;›&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="products__pagination"&gt;&lt;/div&gt;</code></pre>
+
+          <pre><code>
+  const productsCarousel = new MerryGo({
+    gallery: document.querySelector('.products'),
+    galleryInner: document.querySelector('.products__inner'),
+    prevBtn: document.querySelector('.products__arrow--prev'),
+    nextBtn: document.querySelector('.products__arrow--next'),
+    pagination: document.querySelector('.products__pagination'),
+    infinityLoop: false,
+    breakpoints: {
+      0: { slidesVisible: 1.5, gap: 12 },
+      561: { slidesVisible: 2.5, gap: 16 },
+      769: { slidesVisible: 3, gap: 16 },
+      1025: { slidesVisible: 4, gap: 24, slidesToScroll: 4 }
+    }
+  });
+
+  window.activeCarousels = window.activeCarousels || [];
+  window.activeCarousels.push(productsCarousel);</code></pre>
+
+          <pre><code>
+/* Card look */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
   overflow: hidden;
 }
 
-.products-carousel__inner {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.4s ease;
+/* Custom arrows: same specificity as the defaults and loaded later, so they win */
+.products__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: 0;
 }
 
-.products-carousel__slide {
-  width: calc((100% - 60px) / 4);
-  flex-shrink: 0;
-  box-sizing: border-box;
+.products__arrow--prev { left: 8px; }
+.products__arrow--next { right: 8px; }
+
+/* Bars instead of dots */
+.products__pagination .merrygo-bullet {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
 }
 
-.products-carousel__arrow {
-    background-color: #fff;
-    width: 44px;
-    height: 44px;
-    border-radius: 800px;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0px 1px 8px 0px #0000001F;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.products-carousel__arrow svg {
-    width: 16px;
-    height: 16px;
-}
-
-.products-carousel__arrow--prev {
-    left: 15px;
-} 
-
-.products-carousel__arrow--next {
-    right: 15px;
-} 
-
-.products-carousel__pagination {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 8px;
-  height: 20px;
-  margin-inline: auto;
-}
-
-.products-carousel__pagination .merrygo-bullet {
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
-  border: 1px solid #e6e6e6;
-  border-radius: 100%;
-  transition: all .3s ease;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-.products-carousel__pagination .merrygo-bullet-active {
-  background-color: #000000;
-  border-color: #000000;
-}
-
-@media (max-width: 1024px) {
-  .products-carousel__inner { 
-    gap: 15px; 
-  }
-
-  .products-carousel__slide { 
-    width: calc((100% - 30px) / 3); 
-  }
-}
-
-@media (max-width: 768px) {
-  .products-carousel__slide { 
-    width: calc((100% - 15px) / 2); 
-  } 
-}
-
-@media (max-width: 560px) {
-  .products-carousel__inner { 
-    gap: 0; 
-  }
-
-  .products-carousel__slide { 
-    width: 100%; 
-  }
+.products__pagination .merrygo-bullet-active {
+  background: #000000;
 }
           </code></pre>
 
-          <h3>3. Gallery with Thumbnails</h3>
+          <h3>3. Product Gallery with Thumbnails</h3>
+          <pre><code>
+  &lt;div class="product-gallery"&gt;
+    &lt;!-- Thumbnails --&gt;
+    &lt;div class="product-gallery__thumbnails"&gt;
+      &lt;input type="radio" name="thumb" id="thumb-0" checked&gt;
+      &lt;label class="product-gallery__thumbnail" for="thumb-0"&gt;
+        &lt;img src="product-1.jpg" alt="Product 1"&gt;
+      &lt;/label&gt;
+
+      &lt;input type="radio" name="thumb" id="thumb-1"&gt;
+      &lt;label class="product-gallery__thumbnail" for="thumb-1"&gt;
+        &lt;img src="product-2.jpg" alt="Product 2"&gt;
+      &lt;/label&gt;
+
+      &lt;input type="radio" name="thumb" id="thumb-2"&gt;
+      &lt;label class="product-gallery__thumbnail" for="thumb-2"&gt;
+        &lt;img src="product-3.jpg" alt="Product 3"&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Main gallery --&gt;
+    &lt;div class="product-gallery__main"&gt;
+      &lt;div class="product-gallery__inner"&gt;
+        &lt;img src="product-1.jpg" alt="Product 1"&gt;
+        &lt;img src="product-2.jpg" alt="Product 2"&gt;
+        &lt;img src="product-3.jpg" alt="Product 3"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
           <pre><code>
   const thumbInputs = Array.from(
-    document.querySelectorAll('.thumbnails input[type="radio"]')
+    document.querySelectorAll('.product-gallery__thumbnails input[type="radio"]')
   );
 
   const productGallery = new MerryGo({
-    gallery: document.querySelector('.gallery'),
-    galleryInner: document.querySelector('.gallery__inner'),
+    gallery: document.querySelector('.product-gallery__main'),
+    galleryInner: document.querySelector('.product-gallery__inner'),
     thumbs: thumbInputs,
     gap: 0,
     infinityLoop: true
-  });</code></pre>
+  });
 
-          <pre><code>
-const thumbInputs = Array.from(
-  document.querySelectorAll('.product-gallery__thumbnails input[type="radio"]')
-);
-
-const productGallery = new MerryGo({
-  gallery: document.querySelector('.product-gallery__main'),
-  galleryInner: document.querySelector('.product-gallery__inner'),
-  thumbs: thumbInputs,
-  gap: 0,
-  infinityLoop: true
-});
-
-window.activeCarousels = window.activeCarousels || [];
-window.activeCarousels.push(productGallery);
-          </code></pre>
+  window.activeCarousels = window.activeCarousels || [];
+  window.activeCarousels.push(productGallery);</code></pre>
 
           <h3>4. Multiple Carousels on Same Page</h3>
-
           <pre><code>
 window.activeCarousels = window.activeCarousels || [];
 
@@ -841,13 +821,13 @@ showcases.forEach(showcase => {
     nextBtn: showcase.querySelector('.carousel__next'),
     pagination: showcase.querySelector('.carousel__pagination'),
     breakpoints: {
-      0: { slidesVisible: 1, gap: 0 },
+      0: { slidesVisible: 1.5, gap: 12 },
       561: { slidesVisible: 2, gap: 15 },
       769: { slidesVisible: 3, gap: 15 },
       1025: { slidesVisible: 4, gap: 30 }
     }
   });
-  
+
   window.activeCarousels.push(carousel);
 });
           </code></pre>
@@ -855,23 +835,16 @@ showcases.forEach(showcase => {
           <!-- BEST PRACTICES -->
           <h2 id="best-practices">Best Practices</h2>
 
-          <h3>1. CSS-JS Synchronization</h3>
-          <p>The CSS <code>gap</code> must be <strong>identical</strong> to the JavaScript <code>gap</code>:</p>
-          <pre><code>// JavaScript
-  gap: 30
-
-  // CSS
-  .carousel__inner {
-    gap: 30px;
-  }</code></pre>
-
-          <h3>2. Width Calculation</h3>
-          <p>Use the correct formula for each breakpoint:</p>
-          <pre><code>width = (100% - (gap × (slidesVisible - 1))) / slidesVisible</code></pre>
-
-          <h3>3. Instance Management</h3>
+          <h3>1. Instance Management</h3>
           <p>Save carousel references to destroy them when needed:</p>
-          
+          <pre><code>
+  window.activeCarousels = window.activeCarousels || [];
+  window.activeCarousels.push(carousel);
+
+  // Destroy all carousels
+  window.activeCarousels.forEach(c => c.destroy());
+  window.activeCarousels = [];</code></pre>
+
           <blockquote>
             <h4><strong>⚠️ CRITICAL: Destruction in PWA/SPA</strong></h4>
             <p><strong>PWA or Single Page Applications require special attention!</strong></p>
@@ -893,9 +866,10 @@ showcases.forEach(showcase => {
     const oldPath = oldHref.split('?')[0];
     const newPath = newHref.split('?')[0];
 
+    // If changing pages (not just filters/query params)
     if (oldPath !== newPath) {
       if (state === 'start') {
-        // CRITICAL: Destroy all carousels
+        // CRITICAL: Destroy all carousels before navigating
         if (window.activeCarousels && window.activeCarousels.length > 0) {
           window.activeCarousels.forEach(carousel => {
             if (carousel && typeof carousel.destroy === 'function') {
@@ -916,44 +890,88 @@ showcases.forEach(showcase => {
             <li>✅ Do this in <code>state === 'start'</code> event (before loading new page)</li>
           </ul>
 
-          <h3>4. Performance</h3>
+          <p><strong>Note:</strong> If you don't destroy carousels in PWA, after 10-15 navigations users may experience crashes, high memory consumption, and erratic carousel behavior.</p>
+
+          <h3>2. Overriding Styles</h3>
           <ul>
-            <li>Use <code>will-change: transform</code> on the slides container</li>
-            <li>Use <code>loading="lazy"</code> on images outside the first slide</li>
-            <li>Avoid transitions on heavy elements</li>
+            <li>- Use your own classes on arrows and pagination and write normal rules: they win over the injected defaults</li>
+            <li>- Do not use <code>!important</code> and do not rely on <code>.merrygo-*</code> classes for your visual identity; those are structural</li>
+            <li>- Do not set <code>width</code> on slides or <code>gap</code> on the inner unless you also set <code>injectStyles: false</code>; the injected CSS keeps them in sync with your options</li>
           </ul>
 
-          <h3>5. Accessibility</h3>
+          <h3>3. Performance</h3>
           <ul>
-            <li>Add <code>aria-label</code> to navigation buttons</li>
-            <li>Use descriptive <code>alt</code> text on images</li>
-            <li>Ensure adequate contrast on pagination bullets</li>
+            <li>- Use <code>loading="lazy"</code> on images outside the first slide</li>
+            <li>- Avoid transitions on heavy elements inside slides</li>
+            <li>- Call <code>destroy()</code> when the carousel leaves the page</li>
           </ul>
+
+          <h3>4. Accessibility</h3>
+          <ul>
+            <li>- Add <code>aria-label</code> to navigation buttons</li>
+            <li>- Use descriptive <code>alt</code> text on images</li>
+            <li>- Ensure adequate contrast on pagination bullets (they are <code>&lt;button&gt;</code> elements with <code>aria-label</code> and <code>aria-current</code>)</li>
+          </ul>
+
+          <!-- MIGRATING -->
+          <h2 id="migrating-from-1x">Migrating from 1.x</h2>
+
+          <p>The API did not change: every 1.x option and method keeps working. What changes is what MerryGo does for you.</p>
+
+          <h3>1. Update the package</h3>
+          <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/merrygo-carousel@2.0.0/dist/merrygo.js"&gt;&lt;/script&gt;</code></pre>
+
+          <h3>2. Delete the structural CSS (optional)</h3>
+          <p>These rules from the 1.x documentation are now injected, so you can remove them together with the media queries that mirrored your breakpoints:</p>
+          <pre><code>
+.carousel        { overflow: hidden; user-select: none; }
+.carousel__inner { display: flex; gap: 30px; transition: transform 0.4s; will-change: transform; }
+.carousel__slide { flex-shrink: 0; width: calc((100% - 90px) / 4); }</code></pre>
+          <p>Keeping them is harmless as long as they match your options: they simply win over the injected ones.</p>
+
+          <h3>3. Check the arrows</h3>
+          <p>Arrows now have a default look (44px round white buttons) and are <code>position: absolute</code>, anchored to their parent. Inside the gallery nothing else is needed. In another wrapper, the wrapper becomes <code>position: relative</code> (class <code>merrygo-wrapper</code>) if it was static. Your existing arrow CSS still wins over the defaults.</p>
+
+          <h3>4. Behavior changes</h3>
+          <ul>
+            <li>- <code>slidesVisible</code> accepts decimals, also in <code>breakpoints</code></li>
+            <li>- Without loop, <code>nextSlide()</code>, <code>prevSlide()</code> and <code>goToSlide()</code> never leave blank space at the end: the index is limited to the last valid position and the last slide aligns with the end of the container</li>
+            <li>- Breakpoints reset to the constructor values before applying the active breakpoint, so options from a previous breakpoint no longer leak</li>
+            <li>- <code>refresh()</code> re-reads the slides from the DOM</li>
+            <li>- <code>destroy()</code> removes the thumbnail listeners and cancels pending timers</li>
+            <li>- Disabled arrows receive <code>merrygo-arrow--disabled</code> and <code>aria-disabled="true"</code> in addition to the 1.x inline styles</li>
+            <li>- Thumbnail radios, their labels and the image inside each label receive <code>merrygo-thumb-input</code> / <code>merrygo-thumb</code> (+ <code>merrygo-thumb--active</code>) / <code>merrygo-thumb-img</code> with a default look</li>
+            <li>- <code>MerryGo.version</code> is available</li>
+          </ul>
+
+          <h3>5. Opt out</h3>
+          <p><code>injectStyles: false</code> restores the 1.x contract (you provide all the CSS). The classes are still added.</p>
 
           <!-- BROWSER SUPPORT -->
           <h2 id="browser-support">Browser Support</h2>
           <ul>
-            <li>Chrome (latest)</li>
-            <li>Firefox (latest)</li>
-            <li>Safari (latest)</li>
-            <li>Edge (latest)</li>
-            <li>iOS Safari 10+</li>
+            <li>Chrome / Edge 80+</li>
+            <li>Firefox 75+</li>
+            <li>Safari 14.1+ (iOS 14.5+)</li>
             <li>Android Chrome</li>
           </ul>
 
           <!-- TROUBLESHOOTING -->
           <h2 id="troubleshooting">Troubleshooting</h2>
 
-          <h3>Slides not displaying correctly</h3>
-          <p>Make sure:</p>
+          <h3>Slides are stacked or all visible at once</h3>
           <ul>
-            <li>- CSS <code>gap</code> matches JavaScript <code>gap</code></li>
-            <li>- Slide width is calculated correctly with <code>calc()</code></li>
-            <li>- Container has <code>overflow: hidden</code></li>
+            <li>- The base stylesheet is missing: check that <code>injectStyles</code> is not <code>false</code> and that <code>#merrygo-styles</code> exists in <code>&lt;head&gt;</code></li>
+            <li>- Your own CSS overrides <code>width</code> on the slides or <code>display</code> on the inner. Remove those rules or make them match your options</li>
           </ul>
 
+          <h3>My arrow / bullet styles are not applied</h3>
+          <p>Your rule needs at least the specificity of one class (<code>.my-arrow</code>) and must be loaded normally (the injected stylesheet is the first node of <code>&lt;head&gt;</code>, so anything loaded after it wins on ties). Stylesheets inserted at the top of <code>&lt;head&gt;</code> by other scripts can come before it; increase the specificity in that case.</p>
+
+          <h3>Arrows appear far from the carousel</h3>
+          <p>They anchor to the nearest positioned ancestor. Put them inside the gallery, or give their wrapper <code>position: relative</code> (MerryGo does that automatically when the wrapper is static).</p>
+
           <h3>Drag not working</h3>
-          <p>Check that:</p>
           <ul>
             <li>- <code>enableDrag</code> is not set to <code>false</code></li>
             <li>- Container doesn't have conflicting event listeners</li>
@@ -961,12 +979,13 @@ showcases.forEach(showcase => {
           </ul>
 
           <h3>Loop not working</h3>
-          <p>Verify:</p>
           <ul>
             <li>- <code>infinityLoop</code> is set to <code>true</code></li>
-            <li>- You have more than 1 slide</li>
-            <li>- Clones are being created (check DOM inspector)</li>
+            <li>- Clones are being created (check for <code>.clone</code> elements in the DOM inspector)</li>
           </ul>
+
+          <h3>Blank space at the end with a fractional value</h3>
+          <p>Only possible with <code>injectStyles: false</code> and a slide width in your CSS that does not match the formula above. With the injected CSS the last position is always aligned with the end of the content.</p>
 
           <hr style="margin: 60px 0; border: none; border-top: 2px solid var(--gray200);">
 

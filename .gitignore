@@ -31,3 +31,6 @@ Thumbs.db
 
 # Npm
 .npmrc
+
+# Local dev (roadmap v2 + playground de testes) - nao versionar
+dev/

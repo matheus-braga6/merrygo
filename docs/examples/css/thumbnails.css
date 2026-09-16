@@ -28,28 +28,18 @@ body {
   text-align: center;
 }
 
+/* Structural rules (clipping, flex track, slide width, gap) are injected by MerryGo 2.0.
+   Only the layout height and the rounded corners are defined here. */
 .carousel__gallery {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
-  user-select: none;
-  position: relative;
   border-radius: 32px 32px 32px 0;
 }
 
 .carousel__inner {
-  width: 100%;
   height: 100%;
-  display: flex;
-  gap: 20px;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
 }
 
 .carousel__slide {
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: 100%;
   height: 100%;
 }
 
@@ -76,7 +66,6 @@ body {
 
 .carousel__thumbnail {
   width: 100%;
-  height: 80px;
   border: 3px solid transparent;
   border-radius: 8px;
   overflow: hidden;
